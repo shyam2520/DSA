@@ -10,26 +10,23 @@
  * };
  */
 class Solution {
-    int res=0,maxlen=0;
 public:
     int deepestLeavesSum(TreeNode* root) {
-         search(root,0);
-        return res;
-    }
-    void search(TreeNode* root,int len)
-    {
-         if(!root) return ;
-         if(!root->left && !root->right)
-         {
-            if(maxlen<len)
+        queue<TreeNode*> q;
+        int res=0,i;
+        q.push(root);
+        while(!q.empty())
+        {
+            for(i=q.size(),res=0;i>0;i--)
             {
-                res=root->val;
-                maxlen=len;
+                // cout<<i<<endl;
+                TreeNode* node=q.front();
+                q.pop();
+                res+=node->val;
+                if(node->left) q.push(node->left);
+                if(node->right) q.push(node->right);
             }
-            else if(maxlen==len) res+=root->val;
-            return ;
         }
-        search(root->left,len+1);
-        search(root->right,len+1);
+        return res;
     }
 };
