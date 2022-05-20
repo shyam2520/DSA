@@ -18,11 +18,11 @@ public:
         
         if(dp[i][j]) return dp[i][j];
         
-        grid[i][j]=1;
+        // grid[i][j]=1;
         
         dp[i][j]=dfs(grid,i,j+1,dp) +dfs(grid,i+1,j,dp);
         
-        grid[i][j]=0;
+        // grid[i][j]=0;
         return dp[i][j];
     }
 };
