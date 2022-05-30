@@ -1,24 +1,26 @@
 class Solution {
 public:
-    int divide(long int dividend, long int divisor) {
-        long int res=0;
-        bool sign=false;
-        // if(divisor<0) cout<<"true"<<endl;
-        // if(dividend>0) cout<<"true";
-        if((dividend<0 && divisor>0) || (dividend>0 && divisor<0)) sign=true;
+    int divide(long int dividend,long  int divisor) {
+        if(dividend==INT_MIN && divisor==-1) return INT_MAX;
+        if(dividend==INT_MIN && divisor==1) return INT_MIN;
+        long int dvd=labs(dividend),dvs=labs(divisor);
+        bool sign=(dividend<0) ^ (divisor<0)?true:false;
+        long int ans=0;
+        // cout<<dvd<<" "<<dvs;
         // cout<<sign<<endl;
-        dividend=abs(dividend);
-        divisor=abs(divisor);
-        // cout<<dividend<<" "<<divisor<<" "<<sign<<endl;
-
-        if(divisor==1) return sign? -dividend<INT_MIN?INT_MIN:-dividend:dividend>INT_MAX?INT_MAX:dividend;
-        if(dividend==divisor) return sign?-1:1;
-        while(dividend>=0)
-       {
-            res++;
-            dividend-=divisor;
+         if(divisor==1) return sign? -dvd:dvd;
+        while(dvd>=dvs)
+        {
+            long int temp=dvs,m=1;
+            while((temp<<1) <=dvd) 
+            {
+                temp<<=1;
+                // cout<<temp<<endl;
+                m<<=1;
+            }
+            dvd-=temp;
+            ans+=m;
         }
-        // cout<<res<<endl;
-        return sign? -1* (res-1):res-1;
+        return sign ? -ans:ans;
     }
 };
