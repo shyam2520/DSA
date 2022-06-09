@@ -6,16 +6,15 @@ public:
         {
             int mid=l+(r-l)/2;
             if(nums[mid]==target) return mid;
-            if(target<nums[mid])
-            {
-                if(nums[mid]>nums[r]&& target<=nums[r]) l=mid+1;
-                else r=mid;
-            }
+            if(
+                (target>nums[mid] && target<=nums[r]) ||
+                (target<nums[mid] && nums[mid]>nums[r] && target<=nums[r]) ||
+                (target>nums[mid] && nums[mid]>nums[r])
+            )
+                l=mid+1;
             else 
-            {
-                if(nums[r]>=target || nums[mid]>nums[r]) l=mid+1;
-                else r=mid;
-            }
+                r=mid;
+            
         }
         return nums[l]==target?l:-1;
     }
