@@ -12,7 +12,7 @@ public:
             
         }
         int pssum=0;
-        for(int i=nums.size()-1;i>=0;i--)
+        for(int i=nums.size()-1;i>=0 && pssum<=x;i--)
         {
             pssum+=nums[i];
             // cout<<x-pssum<<endl;
