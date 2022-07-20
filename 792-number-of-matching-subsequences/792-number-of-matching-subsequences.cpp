@@ -1,36 +1,20 @@
 class Solution {
 public:
     int numMatchingSubseq(string s, vector<string>& words) {
-        vector<vector<int>> dict(26);
-        unordered_map<string,bool> res;
-        for(int i=0;i<s.length();i++) dict[s[i]-'a'].push_back(i);
-        int curridx,count=0;
-        bool flag;
-        for(auto& word:words)
+        vector<vector<string>> dict(26);
+        for(auto& word:words) dict[word[0]-'a'].push_back(word);
+        int ans=0;
+        for(auto& c:s)
         {
-            flag=true;
-            curridx=-1;
-            if(res.count(word)) 
+            vector<string> temp=dict[c-'a'];
+            dict[c-'a'].clear();
+            for(auto& i:temp)
             {
-                count+=res[word]?1:0;
-                continue;
+                string curr=i.substr(1);
+                if(curr.size()==0) ans++;
+                else dict[curr[0]-'a'].push_back(curr);
             }
-            for(int i=0;i<word.length();i++)
-            {
-                // vector<int> pos=dict[word[i]-'a'];
-                auto p=upper_bound(begin(dict[word[i]-'a']),end(dict[word[i]-'a']),curridx);
-                if(p==dict[word[i]-'a'].end())
-                {
-                    flag=false;
-                    break;
-                }
-                curridx=*p;
-            }
-            if(flag) count++;
-            res[word]=flag;
         }
-        
-        return count;
-            
+        return ans;
     }
 };
