@@ -10,26 +10,14 @@
  * };
  */
 class Solution {
+    TreeNode* prev=NULL;
 public:
     void flatten(TreeNode* root) {
-        if(!root) return ;
-        traverse(root);
-        // return root;
-    }
-    
-    TreeNode* traverse(TreeNode* root)
-    {
-        if(!root) return root;
-        TreeNode* left=traverse(root->left);
-        TreeNode* right=traverse(root->right);
-        if(root->left) 
-        {
-            left->right=root->right;
-            root->right=root->left;
-            root->left=NULL;
-        }
-        return right?right:left?left:root;
-        
-        
+        if(!root)  return ;
+        flatten(root->right);
+        flatten(root->left);
+        root->right=prev;
+        root->left=NULL;
+        prev=root;
     }
 };
