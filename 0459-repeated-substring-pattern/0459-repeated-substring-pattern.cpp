@@ -4,7 +4,7 @@ public:
         string temp="";
         int i=0;
         string ans="";
-        while(i<s.length()){
+        while(i<s.length()/2){
             temp+=s[i++];
             if(s.length()%temp.length()) continue;
             int c=s.length()/temp.length();
