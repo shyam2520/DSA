@@ -1,27 +1,36 @@
 class Solution {
 public:
     string reorganizeString(string s) {
-        vector<int> dict(26,0);
-        priority_queue<pair<int,char>> pq;
+        vector<int> dict(26);
         for(auto& i:s) dict[i-'a']++;
-        for(int i=0;i<26;i++) if(dict[i]) pq.push({dict[i],(char)(i+'a')});
-        string res="A";
-        pair<int,char> temp,curr;
-        while(pq.size()){
-            temp={-1,'A'};
-            // cout<<temp.first<<" "<<temp.second<<endl;
-            if(pq.top().second==res.back()){
-                temp=pq.top();
-                pq.pop();
+        int max_char=0,char_idx=0;
+        // char val='';
+        for(int i=0;i<26;i++){
+            if(max_char<dict[i]){
+                max_char=dict[i];
+                char_idx=i;
+                // val=(char)i+'a';
             }
-            if(pq.empty()) return "";
-            curr=pq.top();
-            pq.pop();
-            res+=curr.second;
-            curr.first--;
-            if(curr.first) pq.push(curr);
-            if(temp!=make_pair(-1,'A')) pq.push(temp);
         }
-        return res.substr(1);
+        if(max_char>(s.length()+1)/2) return "";
+        string res;
+        res.append(s.length(),' ');
+        int idx=0;
+        while(dict[char_idx]){
+            res[idx]=(char)char_idx+'a';
+            dict[char_idx]--;
+            idx+=2;
+        }
+        for(int i=0;i<26;i++){
+            while(dict[i]){
+                if(idx>=s.length()) idx=1;
+                res[idx]=(char)(i+'a');
+                dict[i]--;
+                idx+=2;
+            }
+        }
+
+        return res;
+
     }
 };
