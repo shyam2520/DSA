@@ -1,18 +1,26 @@
 class Solution {
 public:
     vector<int> kWeakestRows(vector<vector<int>>& mat, int k) {
-        priority_queue<pair<int,int>,vector<pair<int,int>>,greater<pair<int,int>>> q;
-        int soldiers_count=0,m=mat.size(),n=mat[0].size();
+        int m=mat.size(),n=mat[0].size();
+        vector<string> dict(n+1);
+        int sc;
         for(int i=0;i<m;i++){
-            soldiers_count=0;
-            for(int j=0;j<n;j++) if(mat[i][j]) soldiers_count++;
-            q.push({soldiers_count,i});
+            sc=0;
+            for(int j=0;j<n;j++) if(mat[i][j]) sc++;
+            dict[sc]+=to_string(i)+' ';
+            // cout<<dict[sc]<<endl;
         }
         vector<int> res;
-        while(k--){
-            res.push_back(q.top().second);
-            q.pop();
+        for(int i=0;i<n+1 && k;i++){
+            string rows=dict[i];
+            stringstream ss(rows);
+            string temp;
+            while(ss>>temp && k){
+                res.push_back(stoi(temp));
+                k--;
+            }
         }
+
         return res;
     }
 };
