@@ -15,12 +15,14 @@ public:
         if(!root) return {};
         vector<int> res;
         queue<TreeNode*> q;
+        int size,max_val;
+        TreeNode* t=NULL;
         q.push(root);
         while(!q.empty()){
-            int size=q.size();
-            int max_val = INT_MIN;
+            size=q.size();
+            max_val = INT_MIN;
             for(int i=0;i<size;i++){
-                TreeNode* t=q.front();
+                t=q.front();
                 q.pop();
                 if(t->left) q.push(t->left);
                 if(t->right) q.push(t->right);
