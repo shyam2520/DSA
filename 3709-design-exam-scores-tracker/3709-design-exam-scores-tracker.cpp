@@ -8,8 +8,8 @@ public:
     }
     
     void record(int time, int score) {
-        cout<<time<<" "<<score<<endl;
-        cout<<"---"<<endl;
+        // cout<<time<<" "<<score<<endl;
+        // cout<<"---"<<endl;
         total+=score; 
         mp[time]={score,total};
     }
@@ -41,9 +41,9 @@ public:
             // if(it==mp.begin() && it->val!=) return 0;
         }
 
-        cout<<startTime<<" "<<start<<endl;
-        cout<<endTime<<" "<<end<<endl;
-        cout<<endl;
+        // cout<<startTime<<" "<<start<<endl;
+        // cout<<endTime<<" "<<end<<endl;
+        // cout<<endl;
         return end-start;
     }
 };
