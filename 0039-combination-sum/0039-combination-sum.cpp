@@ -9,8 +9,8 @@ public:
 
     void combsum(vector<int>& can,int target, int idx,vector<int> temp){
         if(idx==can.size()) return ; 
-        if(target-can[idx]==0){
-            temp.push_back(can[idx]);
+        if(target==0){
+            // temp.push_back(can[idx]);
             res.push_back(temp);
             return;
         }
