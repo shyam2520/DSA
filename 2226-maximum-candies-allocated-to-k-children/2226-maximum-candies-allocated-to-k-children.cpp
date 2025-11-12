@@ -9,7 +9,7 @@ public:
 
     }
     int maximumCandies(vector<int>& candies, long long k) {
-        int l=1,r=*max_element(begin(candies),end(candies)),ans=-1;
+        int l=1,r=10000000,ans=-1;
         while(l<=r){
             int mid = l+(r-l)/2;// no of candies per to be present in a pile 
             if(no_of_piles(candies,mid)>=k){
