@@ -9,12 +9,12 @@
 class Solution {
 public:
     bool hasCycle(ListNode *head) {
-        unordered_map<ListNode*,bool> dict;
-        ListNode* node=head;
-        while(node && !dict.count(node)){
-            dict[node]=true;
-            node=node->next;
+        ListNode *slow=head,*fast=head;
+        while(fast && fast->next){
+            slow=slow->next;
+            fast=fast->next->next;
+            if(slow==fast) return true;
         } 
-        return node;
+        return false;
     }
 };
