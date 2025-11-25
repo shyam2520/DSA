@@ -9,26 +9,36 @@
 class Solution {
 public:
     ListNode *getIntersectionNode(ListNode *headA, ListNode *headB) {
-
-        // unordered_map<ListNode*,bool> dict;
-        ListNode* head=headA;
-        while(headA){
-            headA->val=-abs(headA->val);
-            headA=headA->next;
+        int l1=0,l2=0;
+        ListNode *t1=headA,*t2=headB;
+        while(t1){
+            l1++;
+            t1=t1->next;
         }
 
-        while(headB){
-            if(headB->val<0) {
-                headB->val=abs(headB->val);
-                break;
+        while(t2){
+            l2++;
+            t2=t2->next;
+        }
+        t1=headA;t2=headB;
+        if(l1>l2){
+            while(t1 && l1!=l2){
+                l1--;
+                t1=t1->next;
             }
-            headB=headB->next;
+        }
+        else if(l2>l1){
+            while(t2 && l1!=l2){
+                l2--;
+                t2=t2->next;
+            }
         }
 
-        while(head){
-            head->val=abs(head->val);
-            head=head->next;
+        while(t1 && t2 && t1!=t2){
+            t1=t1->next;
+            t2=t2->next;
         }
-        return headB;
+
+        return t1==t2?t1:NULL;
     }
 };
