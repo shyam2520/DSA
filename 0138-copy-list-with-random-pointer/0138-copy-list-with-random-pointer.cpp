@@ -17,22 +17,36 @@ public:
 class Solution {
 public:
     Node* copyRandomList(Node* head) {
-        Node *node=head;
-        unordered_map<Node*,Node*> dict;
-        Node *curr,*nextnode,*random;
+        if(!head) return head;
+        Node* node=head;
         while(node){
-            if(!dict.count(node)) dict[node]=new Node(node->val);
-            if(node->next && !dict.count(node->next)) dict[node->next]=new Node(node->next->val);
-            if(node->random && !dict.count(node->random)) dict[node->random] = new Node(node->random->val);
-
-            curr=dict[node];
-            random=dict[node->random];
-            nextnode=dict[node->next];
-            curr->next=nextnode;
-            curr->random=random;
-
-            node=node->next;
+          Node* copy = new Node(node->val);
+          Node* next = node->next;
+          node->next = copy;
+          copy->next = next;  
+          node=next;
         }
-        return dict[head];
+        node=head;
+        Node* cphead=node->next;
+        while(node){
+            Node* copy=node->next;
+  
+            Node* cprand=node->random?node->random->next:NULL;
+            copy->random=cprand;
+            // node->next=ognext;
+            node=copy->next;
+        }
+
+        node=head;
+        while(node){
+            Node* copy=node->next;
+            // Node* ognext=node->next?node->next->next:NULL;
+            Node* ognext=copy?node->next->next:NULL;
+            copy->next=ognext?ognext->next:NULL;
+            node->next=ognext;
+            node=ognext;
+        }
+
+        return cphead;
     }
 };
