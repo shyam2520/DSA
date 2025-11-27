@@ -17,23 +17,22 @@ public:
 class Solution {
 public:
     Node* copyRandomList(Node* head) {
+        Node *node=head;
         unordered_map<Node*,Node*> dict;
-        Node* first=head,*prev=NULL;
-        while(head){
-            if(dict.find(head)==dict.end()){
-                dict[head]=new Node(head->val);
-            }
-            Node* copy=dict[head];
-            if(prev) prev->next=copy;
-            if(head->random && dict.find(head->random)==dict.end()){
-                dict[head->random]=new Node(head->random->val);
-            }
-            copy->random=!head->random?head->random:dict[head->random];
-            prev=copy;
-            head=head->next;
+        Node *curr,*nextnode,*random;
+        while(node){
+            if(!dict.count(node)) dict[node]=new Node(node->val);
+            if(node->next && !dict.count(node->next)) dict[node->next]=new Node(node->next->val);
+            if(node->random && !dict.count(node->random)) dict[node->random] = new Node(node->random->val);
 
+            curr=dict[node];
+            random=dict[node->random];
+            nextnode=dict[node->next];
+            curr->next=nextnode;
+            curr->random=random;
+
+            node=node->next;
         }
-    return dict[first];
-        
+        return dict[head];
     }
 };
