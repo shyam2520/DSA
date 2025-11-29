@@ -1,23 +1,24 @@
 class Solution {
 public:
     vector<vector<int>> res;
-    vector<vector<int>> combinationSum(vector<int>& cand, int target) {
-        sort(begin(cand),end(cand));
-        combsum(cand,target,0,{});
-        return res; 
+    
+    void combs(vector<int>& cand,int k,int idx,vector<int> temp){
+        if(!k){
+            res.push_back(temp);
+            return ;
+        }
+        if(idx==cand.size() || cand[idx]>k) return;
+        
+        temp.push_back(cand[idx]);
+        combs(cand,k-cand[idx],idx,temp);
+        temp.pop_back();
+        combs(cand,k,idx+1,temp);
+
     }
 
-    void combsum(vector<int>& can,int target, int idx,vector<int> temp){
-        if(idx==can.size()) return ; 
-        if(target==0){
-            // temp.push_back(can[idx]);
-            res.push_back(temp);
-            return;
-        }
-        if(target-can[idx]<0) return ;
-        temp.push_back(can[idx]);
-        combsum(can,target-can[idx],idx,temp);
-        temp.pop_back();
-        combsum(can,target,idx+1,temp);
+    vector<vector<int>> combinationSum(vector<int>& cand, int k) {
+        sort(begin(cand),end(cand));
+        combs(cand,k,0,{});
+        return res;
     }
 };
