@@ -1,17 +1,19 @@
 class Solution {
 public:
     int divide(int dividend, int divisor) {
-        long long ds=abs((long long)divisor);
-        long long div=abs((long long)dividend);
-        bool neg = false;
-        if((dividend>0 && divisor<0) || (dividend<0 && divisor>0)) neg=true;
-        if(!dividend || divisor==1) return dividend; 
-        long long cnt=0;
-        while(div-ds>=0){
-            cnt++;
-            div-=ds;
-        }
-        cnt=neg?-cnt:cnt;
-        return cnt>INT_MAX?INT_MAX:cnt<INT_MIN?INT_MIN:cnt;
+        long lds=abs((long)divisor);
+        long ldiv=abs((long)dividend);
+        bool neg=false;
+        if((divisor<0 && dividend>0) || (divisor>0 && dividend<0)) neg=true;
+        long ans=0;
+        while(ldiv>=lds)
+        {
+            int cnt=0;
+            while(ldiv>=(lds*pow(2,cnt+1))) cnt++;
+            ans+=pow(2,cnt);
+            ldiv-=lds*pow(2,cnt);
+        }   
+        ans = neg?-ans:ans ;
+        return ans<INT_MIN?INT_MIN:ans>INT_MAX?INT_MAX:ans;
     }
 };
