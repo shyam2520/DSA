@@ -1,20 +1,19 @@
 class Solution {
 public:
-    vector<vector<int>> res;
-    void generate(vector<int>& nums,int idx,vector<int> temp){
-        if(idx==nums.size()) {
-            res.push_back(temp);
-            return ;
-        }
-        res.push_back(temp);
-        for(int i=idx;i<nums.size();i++){
-            temp.push_back(nums[i]);
-            generate(nums,i+1,temp);
-            temp.pop_back();
-        }
-    }
     vector<vector<int>> subsets(vector<int>& nums) {
-        generate(nums,0,{});
-        return res;
+        int n=nums.size();
+        vector<vector<int>> ans;
+        for(int i=0;i<(1<<(n));i++){
+            int val=i;
+            int cnt=0;
+            vector<int> temp;
+            while(val){
+                if(val&1) temp.push_back(nums[cnt]);
+                val>>=1;
+                cnt++;
+            }
+            ans.push_back(temp);
+        }
+        return ans;
     }
 };
