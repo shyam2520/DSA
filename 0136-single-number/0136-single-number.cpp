@@ -1,8 +1,10 @@
 class Solution {
 public:
     int singleNumber(vector<int>& nums) {
-        int res=0;
-        for(auto& i:nums) res^=i;
-        return res;
+        int ans=nums.front();
+        for(int i=1;i<nums.size();i++){
+            ans^=nums[i];
+        }
+        return ans;
     }
 };
