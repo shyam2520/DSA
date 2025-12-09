@@ -6,7 +6,7 @@ public:
         for(int i=2;i<n;i++){
             if(dict[i]) continue;
             cnt++;
-            for(int j=2;i*j<=n;j++) dict[i*j]=true;
+            for(int j=i;(long)i*(long)j<=n;j++) dict[i*j]=true;
         }
         return cnt;
     }
