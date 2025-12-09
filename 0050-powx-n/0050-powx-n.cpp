@@ -1,9 +1,10 @@
 class Solution {
 public:
-    double myPow(double x, int n) {
+    double myPow(double x, long n) {
         bool powneg = n<0;
         bool neg_val = x<0;
-        double res = powerVal(abs(x),abs((long)n));
+        if(abs(x)==1) return n%2==0?1:neg_val?-1:1;
+        double res = powerVal(abs(x),abs(n));
         if(neg_val) neg_val=abs(n)&1;
         res=powneg?1/res:res;
         return neg_val?-res:res;
