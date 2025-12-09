@@ -1,24 +1,19 @@
 class Solution {
-public: 
-    // unordered_map<double,double> dp;
-    double calPower(double x,int pow){
-        // cout<<x<<" "<<pow<<endl;
-        // if(dp.count(pow)) return dp[pow];
-        if(pow==0) return 1.0;
-        if(pow==1) return x;
-        if(pow%2) return x*calPower(x,pow-1);
-        double res=calPower(x,pow/2);
-        return res*res;
-        // if((pow%2)!=0) return dp[pow]=calPower(x,pow/2) * calPower(x,(pow/2)+1);
-        // return dp[pow]=calPower(x,pow/2)*calPower(x,pow/2);
+public:
+    double myPow(double x, int n) {
+        bool powneg = n<0;
+        bool neg_val = x<0;
+        double res = powerVal(abs(x),abs((long)n));
+        if(neg_val) neg_val=abs(n)&1;
+        res=powneg?1/res:res;
+        return neg_val?-res:res;
     }
 
-    double myPow(double x, int n) {
-        double res;    
-        if(n==INT_MIN){
-            res=calPower(x,1)*calPower(x,INT_MAX);
-        }
-        else res=calPower(x,abs(n));
-        return n>0?res:1/res;
+    double powerVal(double x,long n){
+        if(n==1) return x;
+        if(n==0) return 1;
+        if(n%2) return x*powerVal(x,(n-1));
+        double ans = powerVal(x,n/2);
+        return ans*ans;
     }
 };
