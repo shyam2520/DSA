@@ -14,7 +14,7 @@ public:
         if(n==1) return x;
         if(n==0) return 1;
         if(n%2) return x*powerVal(x,(n-1));
-        double ans = powerVal(x,n/2);
+        double ans = powerVal(x,n>>1);
         return ans*ans;
     }
 };
