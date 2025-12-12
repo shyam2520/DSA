@@ -1,39 +1,27 @@
 class Solution {
 public:
+    bool search(vector<vector<char>>& board,map<pair<int,int>,bool>& umap,int i,int j,int idx,string& word){
+        if(idx==word.size()) return true;
+        if(i<0 || j<0 || i==board.size() || j==board[0].size() || umap[{i,j}] || board[i][j]!=word[idx]) return false;
+
+        umap[{i,j}]=true;
+        bool res = search(board,umap,i+1,j,idx+1,word) ||
+        search(board,umap,i-1,j,idx+1,word) ||
+        search(board,umap,i,j-1,idx+1,word) ||
+        search(board,umap,i,j+1,idx+1,word);
+        umap[{i,j}]=false;
+        return res;
+    }
     bool exist(vector<vector<char>>& board, string word) {
-        // word - 1 to 15 char
-        // board - m,n : 1-6 
-        int m=board.size(),n=board[0].size();
-        vector<vector<bool>> visited(m,vector<bool>(n,false));
-        // first find the first match char -> dfs 
-        for(int i=0;i<m;i++){
-            for(int j=0;j<n;j++){
-                if(board[i][j]==word.front()){
-                    bool res = dfs(visited,board,0,i,j,word);
-                    if(res) return true;
-                }
+        map<pair<int,int>,bool> umap;
+        // forloop to find the first char and then expand
+        for(int i=0;i<board.size();i++){
+            for(int j=0;j<board[0].size();j++){
+                if(board[i][j]==word[0] && search(board,umap,i,j,0,word)){
+                    return true;
+                } 
             }
         }
         return false;
-    }
-
-    bool dfs(vector<vector<bool>>& visited,vector<vector<char>>& board,int idx,
-                        int i,int j,string& word)
-    {
-        if(idx==word.size()) return true;
-        if(i<0 || j<0 || i==board.size() || j==board[0].size() || visited[i][j]){
-            return false;
-        } 
-    
-        if(board[i][j]!=word[idx]) return false;
-
-        visited[i][j]=true;
-        bool res = dfs(visited,board,idx+1,i+1,j,word) || 
-                   dfs(visited,board,idx+1,i-1,j,word) ||
-                   dfs(visited,board,idx+1,i,j+1,word) ||
-                   dfs(visited,board,idx+1,i,j-1,word);
-        visited[i][j]=false;
-        return res;
-               
     }
 };
