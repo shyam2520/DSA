@@ -1,31 +1,36 @@
 class Solution {
 public:
-    int trap(vector<int>& height) {
+    int trap(vector<int>& heights) {
+        // stack to push heights
+        // pop only when curr height >= stack.top()
+        // update inbetween to ensure  you subtract heights
         stack<int> stack;
-        int res=0,prev_height=0;
-        for(int i=0;i<height.size();i++){
-            if(!height[i]) continue;
+        int res = 0;
+        for (int i = 0; i < heights.size(); i++) {
+            if(!heights[i]) continue;
             if(stack.empty()) stack.push(i);
-            else if(height[stack.top()]>height[i]){
-                res+=(height[i])*(i-stack.top()-1);
-                stack.push(i);
-            }
             else{
-                prev_height=0;
-                while(stack.size() && height[stack.top()]<=height[i]){
-                    int h=height[stack.top()];
-                    res+=(h-prev_height)*(i-stack.top()-1);
-                    prev_height=max(prev_height,h);
+                int ih=0;
+                while(stack.size() && heights[stack.top()]<=heights[i])
+                {
+                    int idx = stack.top();
+                    int h = min(heights[stack.top()],heights[i]);
+                    int area = max(0,(h-ih)*(i-idx-1));
+                    res+=area;
                     stack.pop();
-
+                    ih=max(ih,h);
                 }
-
                 if(stack.size()){
-                    res+=(height[i]-prev_height)*(i-stack.top()-1);
+                    int idx = stack.top();
+                    int h = min(heights[stack.top()],heights[i]);
+                    int area = max(0,(h-ih)*(i-idx-1));
+                    res+=area;
+                    ih=max(ih,h);
                 }
                 stack.push(i);
             }
         }
+
         return res;
     }
 };
