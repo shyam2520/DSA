@@ -25,10 +25,10 @@ public:
             }
         }
 
-        long long res =0;
+        int res =0;
         for(auto& i:arr){
-            res+=i;
+            res=(res+ i)%mod;
         } 
-        return res%mod;
+        return res;
     }
 };
