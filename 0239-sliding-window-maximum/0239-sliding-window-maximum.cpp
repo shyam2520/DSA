@@ -1,21 +1,33 @@
 class Solution {
 public:
     vector<int> maxSlidingWindow(vector<int>& nums, int k) {
-        int s=0,temp;
+        // queue which keep track of the window
+        // if a new elment is greater than rest of the elements pop all front
+        // values in the queu;
         vector<int> res;
-        map<int,int> dict;
-        for(int i=0;i<nums.size();i++){
-            if(i-s+1>k){
-                temp=nums[s++];
-                dict[temp]--;
-                // cout<<temp<<" "<<dict[temp]<<endl;
-                if(!dict[temp]) dict.erase(temp);
-                // cout<<dict.end()->first<<endl;
+        deque<int> maxq;
+
+        for (int i = 0; i < nums.size(); i++) {
+            // insert at either front or back of queue
+            if (maxq.size() && nums[i] >= nums[maxq.front()]) {
+                while (maxq.size() && nums[i] >= nums[maxq.front()]) {
+                    maxq.pop_front();
+                }
+                maxq.push_front(i);
             }
-            dict[nums[i]]++;
-            if(i-s+1==k) res.push_back((--dict.end())->first);
+            else{
+                while(maxq.size() && nums[i]>=nums[maxq.back()]) maxq.pop_back();
+                maxq.push_back(i);
+            }
+            if (i+1 >= k) {
+                while(maxq.size() && maxq.front()<(i-k+1)) maxq.pop_front();
+                res.push_back(nums[maxq.front()]);
+            }
         }
 
+        // insert to queue
+        // pop if the max crosses window
+        // push to res
         return res;
     }
 };
