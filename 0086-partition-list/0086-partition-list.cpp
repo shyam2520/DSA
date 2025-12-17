@@ -10,29 +10,31 @@
  */
 class Solution {
 public:
-    void setPointers(ListNode*&  s,ListNode*& fs,ListNode*& head){
-        // cout<<head->val<<endl;
-        if(!s){
-            s=head;
-            fs=s;    
-        } 
-        else{
-            s->next=head;
-            s=s->next;
-        }
-        // s=head;
-    }
     ListNode* partition(ListNode* head, int x) {
-        ListNode* s=NULL,*fs=NULL,*b=NULL,*fb=NULL;
-        // cout<<s->val<<endl;
+        
+        ListNode *l1=new ListNode(-1);
+        ListNode *l2=new ListNode(-1);
+        // ListNode *l3=new ListNode(-1);
+        ListNode *l1h=l1,*l2h=l2;
+        // l1<x,l2>x, l3=x
         while(head){
-            // cout<<head->val<<endl;
-            if(head->val<x) setPointers(s,fs,head);
-            else setPointers(b,fb,head);
+            if(head->val<x){
+                l1->next=head;
+                l1=l1->next;
+            }
+            else if((head->val)>=x){
+                l2->next=head;
+                l2=l2->next;
+            }
+            // else{
+            //     l3->next=head;
+            //     l3=l3->next;
+            // }
             head=head->next;
         }
-        if(s) s->next=fb;
-        if(b) b->next=NULL;
-        return fs?fs:fb;
+        if(l2) l2->next=NULL;
+        if(l1) l1->next=NULL;
+        l1->next=l2h->next;
+        return l1h->next;
     }
 };
