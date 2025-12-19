@@ -19,7 +19,7 @@ public:
             }
         }
         
-        sort(begin(nums)+r+1,end(nums));
+        reverse(begin(nums)+r+1,end(nums));
 
 
         // 2,3,5,4,1 ->
