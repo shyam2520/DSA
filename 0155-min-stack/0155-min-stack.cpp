@@ -2,17 +2,26 @@ class MinStack {
 public:
     stack<int> stack,minstack;
     MinStack() {
-        
+        // stack - [-2,0,-3]
+        // minstack - [-2,-3]
     }
     
     void push(int val) {
+        // push into stack , push to minstack only if val<minstack.top();
         stack.push(val);
-        if(minstack.empty()) minstack.push(val);
-        else if(minstack.top()>=val) minstack.push(val);
+        if(minstack.empty()){
+            minstack.push(val);
+        }
+        else if(minstack.size() && minstack.top()>=val){
+            minstack.push(val);
+        }
     }
     
     void pop() {
-        if(minstack.top()==stack.top()) minstack.pop();
+        int top_val=stack.top();
+        if(minstack.top()==top_val){
+            minstack.pop();
+        }
         stack.pop();
     }
     
