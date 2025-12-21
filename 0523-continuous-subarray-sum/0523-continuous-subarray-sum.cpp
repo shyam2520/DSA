@@ -11,7 +11,7 @@ public:
                 if(cntz>1) return true;
             }
             else cntz=0;
-            int rem = sum%k;
+            int rem = nums[i]%k;
             if((sum%k)==0 && i>=1 ) return true;
             if(dict.count(sum%k)){
                 if(i-dict[sum%k]>=2) return true;
