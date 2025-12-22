@@ -1,19 +1,38 @@
 class Solution {
 public:
     int divide(int dividend, int divisor) {
-        long lds=abs((long)divisor);
-        long ldiv=abs((long)dividend);
-        bool neg=false;
-        if((divisor<0 && dividend>0) || (divisor>0 && dividend<0)) neg=true;
-        long ans=0;
-        while(ldiv>=lds)
-        {
-            int cnt=0;
-            while(ldiv>=(lds*pow(2,cnt+1))) cnt++;
-            ans+=pow(2,cnt);
-            ldiv-=lds*pow(2,cnt);
-        }   
-        ans = neg?-ans:ans ;
-        return ans<INT_MIN?INT_MIN:ans>INT_MAX?INT_MAX:ans;
+        bool neg = false;
+        if (dividend > 0 && divisor < 0)
+        {    neg = true;}
+        if (dividend < 0 && divisor > 0)
+        {    neg = true;
+        }
+        // cout<<neg<<endl;
+        // if(divisor>dividend) return 0;
+
+        long div = abs((long)(dividend));
+        long d = abs((long)(divisor));
+
+        if (div == d)
+        {    return neg ? -1 : 1;}
+        long ans = 0;
+
+        while (div >= d) {
+            long cnt = 0;
+            while (div >= (d << (cnt + 1))) {
+                cnt++;
+            }
+            ans += ((long)1 << cnt);
+            div -= (d << (cnt));
+        }
+        cout<<ans<<endl;
+        if (ans >= INT_MAX && neg == false) {
+            return INT_MAX;
+        }
+        if (ans >= INT_MAX && neg == true) {
+            return INT_MIN;
+        }
+
+        return neg ? -ans : ans;
     }
 };
