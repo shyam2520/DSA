@@ -1,15 +1,17 @@
 class Solution {
 public:
+    int getCnt(vector<int>& dict){
+        int cnt=0;
+        for(auto& i:dict) if(i) cnt++;
+        return cnt;
+    }
     int lengthOfLongestSubstringKDistinct(string s, int k) {
-        unordered_map<char,int> dict;
+        vector<int> dict(256,0);
         int anc=0,res=0,n=s.length();
         for(int i=0;i<n;i++){
             dict[s[i]]++;
-            while(dict.size()>k && anc<=i){
+            while(getCnt(dict)>k && anc<=i){
                 dict[s[anc]]--;
-                if(!dict[s[anc]]){
-                    dict.erase(s[anc]);
-                }
                 anc++;
             }
             res=max(res,i-anc+1);
