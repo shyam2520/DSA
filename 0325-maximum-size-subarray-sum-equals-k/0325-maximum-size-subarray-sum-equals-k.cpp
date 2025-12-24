@@ -1,17 +1,19 @@
 class Solution {
 public:
     int maxSubArrayLen(vector<int>& nums, int k) {
-        unordered_map<long long,int> dict;
-        long long sum=0;
-        int res=0;
-        for(int i=0;i<nums.size();i++){
-            sum+=(long long)nums[i];
-            if(sum==k) res=max(res,i+1);
-            if(dict.count(sum-k)) res=max(res,i-dict[sum-k]);
-            dict[sum]=dict.count(sum)?dict[sum]:i;
-            // cout<<sum<<" "<<dict[sum]<<endl;
+        int n = nums.size();
+        unordered_map<long,long> dict;
+        long sum=0,res=0;
+        dict[0]=-1;
+        for(int i=0;i<n;i++){
+            sum+=nums[i];
+            if(dict.find(sum-k)!=dict.end()){
+                res=max(res,i-dict[sum-k]);
+            }
+            if(dict.find(sum)==dict.end()){
+                dict[sum]=i;
+            } 
         }
-
         return res;
     }
 };
