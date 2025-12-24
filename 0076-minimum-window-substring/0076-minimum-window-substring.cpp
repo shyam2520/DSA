@@ -1,57 +1,45 @@
 class Solution {
 public:
-
-    bool isValid(vector<int>& dicts,vector<int>& dictt){
-        int cnt=0;
+    int getValid(vector<int>& dicts,vector<int>& dictt){
         for(int i=0;i<52;i++){
-            // if(dictt[i]==0) continue;
-            // if(dicts[i]>dictt[i]) cnt++;
-            if(dicts[i]<dictt[i]) return false;
+            if(dicts[i]<dictt[i]) {
+                return -1;
+            }
         }
-        return true;
+        return 1;
     }
     string minWindow(string s, string t) {
-        int m=s.length(),n=t.length(),res_len = INT_MAX;
-        if(n>m) return "";
-        string res = "";
-        vector<int> sdict(52),tdict(52);
-        char ch;
-
-        // dict for t
-        for(int i=0;i<n;i++){
-            ch=t[i];
-            if(isupper(ch)) tdict[(ch-'A')+26]++;
-            else tdict[ch-'a']++;
-        }  
-
-        // dict for s +window
-        int anc=0;
-        for(int i=0;i<m;i++){
-            ch=s[i];
-            if(isupper(ch)){
-                sdict[(ch-'A')+26]++;
-            } 
+        if(t.length()>s.length()) return "";
+        vector<int> dicts(52),dictt(52); 
+        for(auto& i:t){
+            if(isupper(i)){
+                 dictt[i-'A'+26]++;
+            }
             else{
-                sdict[ch-'a']++;
-            } 
-            int prev_anc=-1;
-            while(isValid(sdict,tdict)){
-                prev_anc=anc;
-                if(isupper(s[anc])) sdict[(s[anc]-'A')+26]--;
-                else sdict[s[anc]-'a']--;
-                anc++;
-            }
-            if(prev_anc!=-1){
-                anc=prev_anc;
-                if(isupper(s[anc])) sdict[(s[anc]-'A')+26]++;
-                else sdict[s[anc]-'a']++;
-            } 
-            if(prev_anc!=-1 && (i-anc+1)<res_len){
-                res=s.substr(anc,i-anc+1);
-                res_len=res.size();
-            }
+                 dictt[i-'a']++;
+            }        
         }
 
-        return res;
+        int anc=0,len=INT_MAX,l=-1,r=-1;
+        string res="";
+        for(int i=0;i<s.length();i++){
+            if(isupper(s[i])){
+                dicts[s[i]-'A'+26]++;
+            } 
+            else{ 
+                dicts[s[i]-'a']++;
+            }
+            while(anc<=i && getValid(dicts,dictt)>0){
+                if((i-anc+1)<len){
+                    len=i-anc+1;
+                    l=anc;
+                    r=i;
+                }
+                if(isupper(s[anc])) dicts[s[anc]-'A'+26]--;
+                else dicts[s[anc]-'a']--;
+                anc++;    
+            }  
+        }
+        return len!=INT_MAX?s.substr(l,len):"";
     }
 };
