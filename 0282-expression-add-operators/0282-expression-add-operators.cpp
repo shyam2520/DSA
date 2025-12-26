@@ -1,35 +1,36 @@
 class Solution {
 public:
     vector<string> ans;
-    string num;
-    int target;
     vector<string> addOperators(string num, int target) {
-        this->num=num;
-        this->target=target;
-        combinations("",0,0,0);
+        dfs(num,0,0,0,"",target);
         return ans;
     }
 
-    void combinations(string path,int idx,long long res,long long prev_val){
-        if(idx==num.length()) {
-            if(res==target) ans.push_back(path);
+    void dfs(string& num,int curr_idx,long resSoFar,long prevVal,string path,int target){
+        if(curr_idx==num.size()){
+            if(target==resSoFar){
+                ans.push_back(path);
+            }
             return;
         }
 
-        for(int i=idx;i<num.length();i++){
-            if(i>idx && num[idx]=='0') break;
-            string curr=num.substr(idx,i-idx+1);
-            long long curr_val = stol(curr);
-            if(idx==0){
-                combinations(path+curr,i+1,curr_val,curr_val);
+        for(int i=curr_idx;i<num.size();i++){
+            string curr_val = num.substr(curr_idx,i-curr_idx+1);
+            long curr_num = stol(curr_val);
+            if(num[curr_idx]=='0' && i>curr_idx) break;
+            if(curr_idx==0){
+                dfs(num,i+1,curr_num,curr_num,curr_val,target);
             }
             else{
-                combinations(path+"+"+curr,i+1,res+curr_val,curr_val);
-                combinations(path+"-"+curr,i+1,res-curr_val,-curr_val);
-                combinations(path+"*"+curr,i+1,res-prev_val+(prev_val*curr_val),prev_val*curr_val);
+                // +
+                dfs(num,i+1,resSoFar+curr_num,curr_num,path+"+"+curr_val,target);
+                // - 
+                dfs(num,i+1,resSoFar-curr_num,-curr_num,path+"-"+curr_val,target);
+                // *
+                dfs(num,i+1,resSoFar-prevVal+prevVal*curr_num,prevVal*curr_num,path+"*"+curr_val,target);
             }
         }
 
-        return;
+
     }
 };
