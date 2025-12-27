@@ -1,19 +1,33 @@
 class Solution {
 public:
     vector<string> res;
-    void generate(string s,int open,int close){
-        if(open==0 && close==0) {
-            res.push_back(s);
-            return ;
-        }
-        if(open>=close) generate(s+"(",open-1,close);
-        else{
-            if(open) generate(s+"(",open-1,close);
-            if(close) generate(s+")",open,close-1);
-        }
-    }
     vector<string> generateParenthesis(int n) {
-        generate("",n,n);
+        // ""
+        // open , close
+        // ) open<close 
+        
+        generateCombinations("",n,n);
         return res;
     }
+
+    void generateCombinations(string path,int open,int closed){
+        if(open==0 && closed==0){
+            res.push_back(path);
+            return;
+        }
+        // open>=closed , use only open 
+        // else either open or closed 
+        if(open>=closed){ // (,1,2
+            generateCombinations(path+"(",open-1,closed);
+        }
+        else{// ((,0,2-> (()), (),1,1
+            // open 
+            if(open){
+                generateCombinations(path+"(",open-1,closed);
+            } 
+            // closed
+            generateCombinations(path+")",open,closed-1);
+        }
+    }
+
 };
