@@ -1,27 +1,21 @@
 class Solution {
 public:
-    bool inValidChange(int bill,unordered_map<int,int>& dict){
-        int arr[3]={5,10,20};
-        unordered_map<int,int> cpy = dict;
-        for(int i=2;i>=0 && bill;i--){
-            if(cpy[arr[i]]){
-                int change = min(cpy[arr[i]],bill/arr[i]);
-                cpy[arr[i]]-=change;
-                bill-=arr[i]*change;
-            }
-        }
-        if(bill) return true;
-        dict=cpy;
-        return false;
-    }
     bool lemonadeChange(vector<int>& bills) {
-        unordered_map<int,int> dict;
-        for(auto& bill:bills){
-            if(bill==5) dict[bill]++;
-            else{
-                if(inValidChange(bill-5,dict)) return false;
-                dict[bill]++;
+        int five=0,ten=0,twenty=0,n=bills.size();
+        for(int i=0;i<n;i++){
+            if(bills[i]==5) five++;
+            else if(bills[i]==10){
+                ten++;// you add 10s 
+                five--;
             }
+            else{
+                if(ten>0) {
+                    ten--;
+                    five--;
+                }
+                else five-=3;
+            }
+            if(five<0) return false;
         }
         return true;
     }
