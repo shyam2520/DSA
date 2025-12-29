@@ -1,22 +1,22 @@
 class Solution {
 public:
+    using pii = pair<int,int>;
     vector<int> topKFrequent(vector<int>& nums, int k) {
-        vector<vector<int>> bucketSort(nums.size()+1);
         unordered_map<int,int> dict;
-        vector<int> res;
         for(auto& i:nums) dict[i]++;
+        auto cust_comp = [](const pii& a,const pii& b){
+            return a.second>b.second;
+        };
+        priority_queue<pii,vector<pii>,decltype(cust_comp)> pq(cust_comp);
         for(auto& i:dict){
-            int count = i.second;
-            bucketSort[count].push_back(i.first);
+            pq.push({i.first,i.second});
+            if(pq.size()>k) pq.pop();
         }
-        for(int i=bucketSort.size()-1;i>=0 && res.size()<k;i--){
-            while(bucketSort[i].size() && res.size()<k)
-            {
-                res.push_back(bucketSort[i].back());
-                bucketSort[i].pop_back();
-            }
+        vector<int> res;
+        while(pq.size()){
+            res.push_back(pq.top().first);
+            pq.pop();
         }
         return res;
-
     }
 };
