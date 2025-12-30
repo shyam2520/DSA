@@ -1,50 +1,64 @@
+class compare{
+    public: 
+    using Node = std::array<int,4>;
+    bool operator()(const Node& a,const Node& b){
+        return a[0]<b[0];
+    }
+};
 class Twitter {
 public:
-    using pii=pair<int,int>;
-    unordered_map<int,vector<pii>> usrtwts;
+    // 1. postTweet - > user <-> tweets : map(key,vector<(int,int)>)
+    // 2. follow/unfollow -> user <-> follower : map(key,unordered<int>)
+    // 3. user-> followers - O(1)
+    // 4.  for follow in followe - O(N)
+    // 5.       1
+    // 6.  pq= O(N) TC - Nlog(n) {time,tweet,idx,follwer}
+    // 7. 
+    using Node = std::array<int,4>;
+    using pii = pair<int,int>;
+
+    unordered_map<int,vector<pii>> tweets;
     unordered_map<int,unordered_set<int>> followers;
-    int time=0;
+    priority_queue<Node,vector<Node>,compare> pq;
+    int time = 0;
+
     Twitter() {
         
     }
     
     void postTweet(int userId, int tweetId) {
         ++time;
-        usrtwts[userId].push_back({time,tweetId});
+        tweets[userId].push_back({time,tweetId});
     }
     
     vector<int> getNewsFeed(int userId) {
-        // 1. get all the followees of the userId
-        // 2. merge k sorted lists
-        // 3. take all the last values of all the followes and push it into a heap 
-        // 4. keep adding those values into the heap till res >10 
-        // 5. push the next largest value for a given followeeId 
-        vector<pii> tweets; 
-        priority_queue<vector<int>> pq; 
+        // userId-> follow-> userId;
         followers[userId].insert(userId);
-
-        for(auto& followee:followers[userId]){
-            tweets = usrtwts[followee];
-            if(!tweets.size()) continue;
-            int idx = tweets.size();
-            pq.push({tweets[idx-1].first,tweets[idx-1].second,followee,idx-1}); // max heap 
+        for(auto& follower:followers[userId]){
+            // retrieve the last tweets 
+            int n = tweets[follower].size();
+            if(n==0) continue;
+            pii twt = tweets[follower][n-1];
+            pq.push({twt.first,twt.second,n-1,follower});
         }
-
-        vector<int> feed;
         vector<int> res;
-        while(pq.size() && res.size()<10){
-            feed=pq.top();
+        int cnt =10;
+        while(pq.size() && cnt){
+            Node top_val = pq.top();
             pq.pop();
-            res.push_back(feed[1]);
-            int idx=feed[3],followee=feed[2];
-            tweets = usrtwts[followee];
-            if((idx-1)>=0)
+            res.push_back(top_val[1]);
+            // pq.push({})
+            int follower = top_val[3];
+            if(top_val[2]-1>=0)
             {
-                pq.push({tweets[idx-1].first,tweets[idx-1].second,followee,idx-1});
+                pii newtweet = tweets[follower][top_val[2]-1];
+                pq.push({newtweet.first,newtweet.second,top_val[2]-1,follower});
             }
+            cnt--;
         }
 
         return res;
+
     }
     
     void follow(int followerId, int followeeId) {
@@ -52,6 +66,9 @@ public:
     }
     
     void unfollow(int followerId, int followeeId) {
+        if(followers[followerId].find(followeeId)==followers[followerId].end()){
+            return ;
+        }
         followers[followerId].erase(followeeId);
     }
 };
