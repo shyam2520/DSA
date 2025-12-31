@@ -3,7 +3,7 @@ public:
     // int dp[10001]={-1}
     bool canJump(vector<int>& nums) {
         int n = nums.size();
-        vector<int> dp(n,-1);
+        vector<int> dp(10001,-1);
         return canJump(0,nums,dp);
     }
 
