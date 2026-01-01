@@ -1,6 +1,6 @@
 class Solution {
 public:
-    int dp[10001] = {-1};
+    int dp[10001];
     int jump(vector<int>& nums) {
         memset(dp, -1, sizeof(dp));
         return combs(0,nums);
