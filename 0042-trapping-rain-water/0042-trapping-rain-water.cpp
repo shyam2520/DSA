@@ -1,17 +1,25 @@
 class Solution {
 public:
     int trap(vector<int>& height) {
-        int n = height.size();
-        vector<int> prefixMax(n),suffixMax(n);
-        prefixMax[0]=height[0];
-        suffixMax[n-1]=height[n-1];
-        int res=0;
-        for(int i=1;i<n;i++){
-            prefixMax[i]=max(height[i],prefixMax[i-1]);
-            suffixMax[n-i-1]=max(height[n-i-1],suffixMax[n-i]);
-        }
+        stack<int>  stack;
+        int min_height,res=0,n=height.size();
         for(int i=0;i<n;i++){
-            res+=max(0,min(prefixMax[i],suffixMax[i])-height[i]);
+            if(!height[i]) continue;
+            if(stack.empty()) stack.push(i);// idx;
+            else{
+                min_height=0;// max the min height of rods in between 
+                while(stack.size() && height[stack.top()]<=height[i]){
+                    int left = stack.top();
+                    stack.pop();
+                    int area = (height[left]-min_height)*(i-left-1);
+                    res+=area;
+                    min_height = max(min_height,height[left]);
+                }
+                if(stack.size()){
+                    res+=(height[i]-min_height)*(i-stack.top()-1);
+                }
+                stack.push(i);
+            }
         }
         return res;
     }
