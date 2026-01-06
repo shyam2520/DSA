@@ -12,15 +12,29 @@
 class Solution {
 public:
     vector<int> res;
+    using ptc= pair<TreeNode*,char>;
     vector<int> postorderTraversal(TreeNode* root) {
-        postorder(root);
-        return res;
-    }
+        stack<ptc> stack; 
+        TreeNode* node = root; 
+        while(node || stack.size()){
+            if(node){
+                stack.push({node,'l'});
+                node=node->left;
+            }
+            else if(stack.size())
+            {
+                ptc top = stack.top(); 
+                stack.pop();
+                if(top.second=='l'){
+                    node=top.first->right;
+                    stack.push({top.first,'r'});
+                }
+                else{
+                    res.push_back(top.first->val);
+                }
+            }
+        }
 
-    void postorder(TreeNode *node){
-        if(!node) return; 
-        postorder(node->left);
-        postorder(node->right);
-        res.push_back(node->val);
+        return res;
     }
 };
