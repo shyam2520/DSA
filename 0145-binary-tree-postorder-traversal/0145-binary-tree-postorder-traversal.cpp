@@ -11,38 +11,34 @@
  */
 class Solution {
 public:
-    // 1. node traverse left->right->root
-    // 2. we have to push the final values into the stack at popping time 
-    // 3. catch is if we do it like pre/in order we end up printing root first 
-    // 4. so he we need to ensure that a root is print only after its lst & rst are parse
-    // 5. create pair - (node,'l/r') l -> lst is parsed, r -> rst is parsed 
-    // 6. only pop out when the top value of stack is 'r'  
-
-    vector<int> res;
-    using ptc= pair<TreeNode*,char>;
     vector<int> postorderTraversal(TreeNode* root) {
-        stack<ptc> stack; 
+        stack<TreeNode*> stack; 
         TreeNode* node = root; 
-        while(node || stack.size()){
+        vector<int> res;
+        while( node || stack.size()){
             if(node){
-                // 
-                stack.push({node,'l'});
+                stack.push(node);
                 node=node->left;
             }
-            else if(stack.size())
-            {
-                ptc top = stack.top(); 
-                stack.pop();
-                if(top.second=='l'){
-                    node=top.first->right;
-                    stack.push({top.first,'r'});
-                }
+            else{
+                TreeNode* curr = stack.top()->right;
+                if(curr!=NULL){
+                    node = curr;
+                } 
                 else{
-                    res.push_back(top.first->val);
+                    res.push_back(stack.top()->val);
+                    curr=stack.top();
+                    stack.pop(); 
+                    while(stack.size() && stack.top()->right==curr)
+                    {
+                        curr=stack.top();
+                        res.push_back(curr->val);
+                        stack.pop();
+                    }
+                    // if(stack.size()) node=stack.top()->right;
                 }
             }
         }
-
         return res;
     }
 };
