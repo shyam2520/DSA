@@ -1,32 +1,24 @@
 class Solution {
 public:
     bool checkValidString(string s) {
-        stack<int> stack;
-        return recursion(s,0,stack);
+        int min_bracs = 0, max_bracs = 0;
+        int n = s.length(); 
+        for(int i=0;i<n;i++){
+            if(s[i]=='(') {
+                min_bracs++;
+                max_bracs++;
+            }
+            else if(s[i]==')'){
+                min_bracs--;
+                max_bracs--;
+            }
+            else{
+                min_bracs--;
+                max_bracs++;
+            }
+            if(min_bracs<0) min_bracs=0;
+            if(max_bracs<0) return false;
+        }
+        return min_bracs==0;
     }
-    
-    bool recursion(string& s,int idx,stack<int> stack){
-        if(idx==s.length()){
-            return stack.empty();
-        }
-        if(s[idx]=='('){
-            stack.push('(');
-            return recursion(s,idx+1,stack);
-        }
-        if(s[idx]==')'){
-            if(stack.size()&& stack.top()=='(') stack.pop();
-            else stack.push(')');
-            return recursion(s,idx+1,stack);
-        }
-        bool empty = recursion(s,idx+1,stack);
-        stack.push('(');
-        bool open = recursion(s,idx+1,stack);
-        stack.pop();
-        // stack.push(')');
-        if(stack.size()&& stack.top()=='(') stack.pop();
-        else stack.push(')');
-        bool close = recursion(s,idx+1,stack);
-        return empty||open||close;
-    }
-
 };
