@@ -22,7 +22,7 @@ public:
         if(!node) return -10000;
         int lst = calMax(node->left,res);
         int rst = calMax(node->right,res);
-        res=max({res,node->val,lst,rst,lst+node->val,rst+node->val,lst+rst+node->val});
+        res=max({res,node->val,lst+node->val,rst+node->val,lst+rst+node->val});
         return max(node->val+max(lst,rst),node->val);
     }
 
