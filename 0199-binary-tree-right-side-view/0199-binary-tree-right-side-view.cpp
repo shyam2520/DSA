@@ -11,20 +11,18 @@
  */
 class Solution {
 public:
-    map<int,TreeNode*> dict;
+    vector<int> res;
     vector<int> rightSideView(TreeNode* root) {
         dfs(root,0);
-        vector<int> res;
-        for(auto& i:dict){
-            res.push_back(i.second->val);
-        }
         return res;
     }
 
-    void dfs(TreeNode* node,int ridx){
-        if(!node) return;
-        dict[ridx]=node;
-        dfs(node->left,ridx+1);
-        dfs(node->right,ridx+1);
+    void dfs(TreeNode* node,int level)
+    {
+        if(!node) return ; 
+        // res.push_back()
+        if(res.size()==level) res.push_back(node->val);
+        dfs(node->right,level+1);
+        dfs(node->left,level+1);
     }
 };
