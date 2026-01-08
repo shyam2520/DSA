@@ -11,43 +11,41 @@
  */
 class Solution {
 public:
-    int preidx=0;
-    TreeNode* buildTree(vector<int>& preorder, vector<int>& inorder) {
-        // i - [9,3,
-         //    [9]   [15,20,7]
-        // p - [3,9,20,15,7]
-        // p [1,2,3,4,....20]
-        // i [1,2,3,4,....20]
-
-        // preidx for preord 
-        // search preidx val in inorder 
-        // split inorder to its lst & rst
-         
-        return tree(preorder,inorder,0,inorder.size()-1);
-
+    int preidx=0; 
+    TreeNode* buildTree(vector<int>& preorder, vector<int>& inorder)
+    {
+        // 1. use the preidx to fill root, left , right 
+        // 2. split inorder array based on the value inidx ->(0,inidx-1), (inidx+1, n);
+        return genTree(preorder,inorder,0,inorder.size()-1);
     }
 
-    int search(vector<int>& in,int st,int end,int val){
-        for(int i=st;i<=end;i++){
-            if(in[i]==val) return i;
+    int findIdx(vector<int>& inorder,int ele,int s,int e){
+        for(int i=s;i<=e;i++){
+            if(inorder[i]==ele){
+                return i;
+            }
         }
         return -1;
     }
 
-    TreeNode* tree(vector<int>& pre,vector<int>& in,int st,int end){
-        if(st>end) return NULL;
-        if(st==end){
-            preidx++;
-            return new TreeNode(in[st]);
+    TreeNode* genTree(vector<int>& preorder,vector<int>& inorder,int l,int r)
+    {
+        if(l==r) {
+            return new TreeNode(preorder[preidx++]);
         }
-        // create node for preidx 
-        TreeNode* node = new TreeNode(pre[preidx]);
-        int idx=search(in,st,end,pre[preidx]);
 
-        if(idx==-1) return NULL;
+        if(l>r) return NULL;
+        int node_val = preorder[preidx]; 
+        
+        //find the element in inorder and split nodes 
+        int in_idx = findIdx(inorder,node_val,l,r);
+        if(in_idx==-1) return NULL;
         preidx++;
-        node->left=tree(pre,in,st,idx-1);
-        node->right=tree(pre,in,idx+1,end);
+
+        // 
+        TreeNode* node = new TreeNode(inorder[in_idx]);
+        node->left= genTree(preorder,inorder,l,in_idx-1);
+        node->right = genTree(preorder,inorder,in_idx+1,r);
         return node;
     }
 };
