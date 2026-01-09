@@ -12,59 +12,41 @@
 class Solution {
 public:
     TreeNode* deleteNode(TreeNode* root, int key) {
-        if(!root) return NULL; 
-        TreeNode* dummy = new TreeNode(-1); 
-        dummy->left = root; 
-        // if node to be delete is the key then make its lst or rst as root  
-        // for a node 
-        dummy->left = delNode(root,key);
+        // 1. find the node 
+        // 2. check if no child or one child exists return accordingly 
+        // 3. if both child exists return inorder successor and replace
+        // that with root value then from start searching from root->right for 
+        // successor value when that value is found that would be delete (thats duplicate )
 
-        return dummy->left; 
+        return delNode(root,key);
     }
 
-    TreeNode* delNode(TreeNode* node, int key){
+    TreeNode* delNode(TreeNode* node,int& key){
         if(!node) return NULL; 
-        // if that 
-        if(node->val == key){
-            // find replacement 
-            // check if leaf return NULL; 
-            TreeNode* delNode = node;
-            if(!node->left && !node->right) return NULL; 
-            if(node->left){
-                TreeNode* prev = node->left ; 
-                node = node->left;
-                while(node->right){
-                    prev=node;
-                    node=node->right;
-                }
-                if(prev!=node){
-                    prev->right = node->left;
-                } 
-                if(node!=delNode->left) node->left=delNode->left;
-                if(node!=delNode->right) node->right=delNode->right;
-                delete(delNode);
-                return node;
+        if(node->val>key) {
+            node->left=delNode(node->left,key);
+        }
+        else if(node->val<key){
+            node->right=delNode(node->right,key);
+        }
+        else{
+            if(!node->left && !node->right){
+                delete node;
+                return NULL; 
+            } 
+            if(!node->left || !node->right){
+                TreeNode* res = node->left?node->left:node->right;
+                delete node;
+                return res;
             }
-            else{
-                TreeNode* prev = node->right; 
-                node = node->right; 
-                while(node->left){
-                    prev=node; 
-                    node=node->left; 
-                }
-                if(prev!=node){
-                    prev->left=node->right;
-                }
-                if(node!=delNode->left) node->left=delNode->left;
-                if(node!=delNode->right) node->right=delNode->right;
-                delete(delNode);
-                return node;
-            }
-        }   
-        if(node->val>key){
-            node->left = delNode(node->left,key);
-        } 
-        else node->right = delNode(node->right,key);
+            // find inorder success; 
+            TreeNode* successor = node->right; 
+            while(successor->left) successor = successor->left; 
+            node->val = successor->val; 
+            node->right = deleteNode(node->right,successor->val);
+
+        }
         return node;
     }
+
 };
