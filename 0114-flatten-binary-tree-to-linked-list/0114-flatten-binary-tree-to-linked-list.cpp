@@ -11,26 +11,20 @@
  */
 class Solution {
 public:
-    queue<TreeNode*> q;
+    TreeNode* prev=NULL;
     void flatten(TreeNode* root) {
-        preorder(root);
+        dfs(root);
     }
-    
-    void preorder(TreeNode* node){
-        if(!node) return ; 
-        q.push(node);
-        TreeNode* left = node->left;
-        node->left = NULL; 
-        TreeNode* right = node->right;
-        node->right = NULL;
-        if(q.size()>1){
-            TreeNode* top = q.front();
-            q.pop();
-            top->right = q.front();
-        }
-        if(left) preorder(left);
-        if(right) preorder(right);
-    }
-        
 
+    void dfs(TreeNode* node){
+        if(!node) return ; 
+        TreeNode* rst = node->right;
+        if(prev){
+            prev->right = node;
+        } 
+        prev=node;
+        dfs(node->left);
+        node->left=NULL;
+        dfs(rst);
+    }
 };
