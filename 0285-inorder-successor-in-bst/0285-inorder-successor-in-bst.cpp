@@ -19,18 +19,18 @@ public:
     // if parent < child ( rst) -> left most child 
     // if root ==p the 
 
-    TreeNode* traverse(TreeNode* node, TreeNode* p, TreeNode* parent){
+    TreeNode* traverse(TreeNode* node, TreeNode* p, TreeNode* larger){
         if(!node) return NULL; 
         if(node==p){
             // check if its lst or rst 
-            if(parent){
+            if(larger){
                 TreeNode* succ = inordersuccessor(node->right);
-                return succ?succ:parent;
+                return succ?succ:larger;
             }
             else return inordersuccessor(node->right);
         }
         if(node->val>p->val) return traverse(node->left,p,node);
-        else return traverse(node->right,p,parent);
+        else return traverse(node->right,p,larger);
 
     }
 
