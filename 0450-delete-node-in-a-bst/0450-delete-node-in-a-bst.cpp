@@ -42,6 +42,7 @@ public:
                 } 
                 if(node!=delNode->left) node->left=delNode->left;
                 if(node!=delNode->right) node->right=delNode->right;
+                delete(delNode);
                 return node;
             }
             else{
@@ -56,6 +57,7 @@ public:
                 }
                 if(node!=delNode->left) node->left=delNode->left;
                 if(node!=delNode->right) node->right=delNode->right;
+                delete(delNode);
                 return node;
             }
         }   
