@@ -34,7 +34,7 @@ public:
         stack<TreeNode*> left, right; 
         insertAsc(root,left);
         insertDesc(root,right);
-        while(left.size() && right.size()){
+        while(left.size() && right.size() && left.top()!=right.top()){
             int l=left.top()->val;
             int r=right.top()->val;
             // if(l>root->val || r<=root->val) return false;
