@@ -9,40 +9,49 @@
  *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
  * };
  */
-class compare{
-    public: 
-    bool operator()(TreeNode* a,TreeNode* b){
-        return a->val<b->val;
-    }
-};
-
 class Solution {
 public:
-    vector<TreeNode*> inorderarr;
-    void recoverTree(TreeNode* root) {
-        // 1. inorder traversal store nodes 
-        // 2. find two values which are in wrong place 
-        // 3. swap the data 
-        inorder(root);
-        vector<TreeNode*> cpy=inorderarr;
-        sort(inorderarr.begin(),inorderarr.end(),compare());
-        TreeNode* temp1=NULL,*temp2=NULL;
-        for(int i=0;i<inorderarr.size();i++){
-            if(inorderarr[i]->val!=cpy[i]->val){
-                if(!temp1) temp1 = cpy[i];
-                else temp2=cpy[i];
-                // swap(inorderarr[i]->val,cpy[i]->val);
+    vector<TreeNode*> inorder; 
+
+    void inordertraversal(TreeNode* node){
+        stack<TreeNode*> stk;
+        // TreeNode* node = root; 
+        while( stk.size() || node){
+            if(node){
+                while(node){
+                    stk.push(node);
+                    node=node->left;
+                }
+            }
+            else{
+                TreeNode* top = stk.top();
+                stk.pop();
+                node=top->right;
+                inorder.push_back(top);
             }
         }
-        int temp = temp1->val;
+    }
+    void recoverTree(TreeNode* root) {
+        inordertraversal(root);
+        TreeNode *temp1=NULL,*temp2=NULL; 
+        int n = inorder.size();
+        for(int i=0;i<n;i++){
+            // compare with its next elements 
+            if(i>0 && inorder[i-1]->val>inorder[i]->val)
+            {
+                    if(!temp1) temp1=inorder[i]; 
+                    else temp2=inorder[i];
+            }
+            else if(i<n-1 && inorder[i]->val>inorder[i+1]->val){
+                if(!temp1) temp1=inorder[i]; 
+                else temp2=inorder[i];
+            }
+
+        }
+
+        int temp = temp1->val; 
         temp1->val = temp2->val;
         temp2->val = temp;
-    }
 
-    void inorder(TreeNode* node){
-        if(!node) return ;
-        inorder(node->left);
-        inorderarr.push_back(node);
-        inorder(node->right); 
     }
 };
