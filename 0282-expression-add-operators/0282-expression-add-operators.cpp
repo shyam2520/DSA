@@ -1,36 +1,52 @@
 class Solution {
 public:
-    vector<string> ans;
-    vector<string> addOperators(string num, int target) {
-        dfs(num,0,0,0,"",target);
-        return ans;
+    vector<string> res;
+    
+    bool leadingzeores(string& temp){
+        int i=0,cnt=0;
+        while(i<temp.size() && temp[i]=='0' && cnt<2) {
+            cnt++;
+            i++;
+        } 
+        return cnt>1||(cnt&& temp.back()!='0');
     }
-
-    void dfs(string& num,int curr_idx,long resSoFar,long prevVal,string path,int target){
-        if(curr_idx==num.size()){
-            if(target==resSoFar){
-                ans.push_back(path);
-            }
-            return;
+    void recursion(
+    string& nums,int target,int idx,string ans,long long resSoFar,long long prev
+    )
+    {
+        // if(resSoFar>)
+        if(idx==nums.size()){
+            if(resSoFar==target) res.push_back(ans);
         }
-
-        for(int i=curr_idx;i<num.size();i++){
-            string curr_val = num.substr(curr_idx,i-curr_idx+1);
-            long curr_num = stol(curr_val);
-            if(num[curr_idx]=='0' && i>curr_idx) break;
-            if(curr_idx==0){
-                dfs(num,i+1,curr_num,curr_num,curr_val,target);
+        // slice integer till end
+        int n = nums.size();
+        for(int i=idx;i<n;i++){
+            string curr=nums.substr(idx,i-idx+1);
+            long long curr_val = stoll(curr);
+            if(curr.size() && leadingzeores(curr)) {
+                return;
+            } 
+            if(!ans.size() ) {
+                recursion(nums,target,i+1,curr,curr_val,curr_val);
             }
             else{
-                // +
-                dfs(num,i+1,resSoFar+curr_num,curr_num,path+"+"+curr_val,target);
-                // - 
-                dfs(num,i+1,resSoFar-curr_num,-curr_num,path+"-"+curr_val,target);
-                // *
-                dfs(num,i+1,resSoFar-prevVal+prevVal*curr_num,prevVal*curr_num,path+"*"+curr_val,target);
+                recursion(nums,target,i+1,ans+"+"+curr,resSoFar+curr_val,curr_val);
+                recursion(nums,target,i+1,ans+"-"+curr,resSoFar-curr_val,-curr_val);
+                recursion(nums,target,i+1,ans+"*"+curr,
+                resSoFar-prev+(prev*curr_val),prev*curr_val);
+
             }
+
         }
 
+    }
 
+    vector<string> addOperators(string num, int target) {
+        // 2*3*4 -> prev = has to be 6 
+        // 123 -> write loop to create substring 
+        // 1. how to recogonise that leading 0s 
+        recursion(num,target,0,"",0,0);
+                //num,tar,ans,idx,res,prev
+        return res;
     }
 };
