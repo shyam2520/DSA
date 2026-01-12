@@ -8,7 +8,7 @@ public:
         // best is do bfs from every 0 
         int m = mat.size(), n = mat[0].size(); 
         vector<vector<int>> dp(m,vector<int>(n,-1)); 
-        vector<vector<bool>> visited(m,vector<bool>(n,false));
+        // vector<vector<bool>> visited(m,vector<bool>(n,false));
         queue<pii> q;
         for(int i=0;i<m;i++){
             for(int j=0;j<n;j++){
@@ -19,31 +19,33 @@ public:
                 }
             }
         }
-        bfs(mat,dp,visited,q);
+        bfs(mat,dp,
+        // visited,
+        q);
         return dp;
     }
 
     void bfs(
         vector<vector<int>>& mat,
         vector<vector<int>>& dp,
-        vector<vector<bool>>& visited,
+        // vector<vector<bool>>& visited,
         queue<pii>& q)
     {
-        int cnt = 0;
+        int cnt = 1;
         while(q.size()){
             int n = q.size(); 
             for(int i=0;i<n;i++){
                 auto [x,y]=q.front();
-                dp[x][y]=cnt;
                 q.pop();
                 for(auto& i:dir){
                     int newx = i[0]+x;
                     int newy = i[1]+y; 
                     if(newx<0 || newy<0 || newx==mat.size()
                     || newy==mat[0].size() || mat[newx][newy]==0 ||
-                    visited[newx][newy]) continue;
-                    // dp[newx][newy]=cnt;
-                    visited[newx][newy]=true;
+                    dp[newx][newy]!=-1) continue;
+                // dp[x][y]=cnt;
+                    dp[newx][newy]=cnt;
+                    // visited[newx][newy]=true;
                     q.push({newx,newy});
                 }   
             }
