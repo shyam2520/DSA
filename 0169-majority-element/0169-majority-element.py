@@ -6,7 +6,7 @@ class Solution:
                 cnt+=1 
             else: 
                 cnt-=1
-                if cnt<0: 
+                if cnt<1: 
                     curr_ele=i 
                     cnt=1
         return curr_ele
