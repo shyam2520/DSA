@@ -1,34 +1,19 @@
 class Solution {
 public:
     void nextPermutation(vector<int>& nums) {
-        // find the idx , idx<idx+1 
-        int r=nums.size()-2;
-        while(r>=0 && nums[r]>=nums[r+1]) {
-            r--;
+        int i;
+        int n = nums.size(); 
+        for(i=n-2;i>=0;i--) if(nums[i]<nums[i+1]) break;
+        if(i<0){
+            reverse(begin(nums),end(nums));
+            return; 
         }
-
-        if(r==-1) {
-            sort(begin(nums),end(nums));
-            return;
-        }
-
-        for(int i=nums.size()-1;i>r;i--){
-            if(nums[i]>nums[r]){
-                swap(nums[i],nums[r]);
+        for(int j=n-1;j>=0;j--){
+            if(nums[j]>nums[i]) {
+                swap(nums[i],nums[j]);
                 break;
             }
         }
-        
-        reverse(begin(nums)+r+1,end(nums));
-
-
-        // 2,3,5,4,1 ->
-        // 1,2,3,4,5
-        // 1,2,4,3,5
-
-        // auto it = upper_bound(begin(nums),end(nums),nums[r]);
-        // swap idx with its next greater value 
-        
-        // sort everything from idx+1
+        reverse(begin(nums)+i+1,end(nums));
     }
 };
