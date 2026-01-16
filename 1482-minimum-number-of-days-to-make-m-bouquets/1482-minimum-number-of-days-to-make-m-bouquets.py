@@ -23,7 +23,6 @@ class Solution:
         res = -1 
         while l<=r: 
             mid = l+(r-l)//2 
-            print(mid)
             if self.getBoquet(bloomDay,mid,k)>=m:
                 res=mid
                 r=mid-1 
