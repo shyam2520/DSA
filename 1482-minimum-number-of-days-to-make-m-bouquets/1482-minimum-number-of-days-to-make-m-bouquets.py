@@ -1,16 +1,15 @@
 class Solution:
     def getBoquet(self,bloomDay,days,k): 
-        anc,cnt=-1,0 
+        window,cnt=0,0
         i=0
-        while i<len(bloomDay): 
-            if bloomDay[i]<=days:
-                anc=i
-                while i<len(bloomDay) and bloomDay[i]<=days: 
-                    if i-anc+1==k: 
-                        cnt+=1
-                        break 
-                    i+=1
-            i+=1
+        for day in bloomDay: 
+            if day<=days:
+                window+=1 
+                if window==k: 
+                    cnt+=1
+                    window=0 
+            else:
+                window=0
         return cnt
         
 
