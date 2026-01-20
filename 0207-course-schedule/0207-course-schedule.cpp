@@ -1,34 +1,44 @@
 class Solution {
 public:
-    bool canFinish(int numCourses, vector<vector<int>>& prerequisites) {
-        // 1. bfs topo sort & check if its a cycle or not 
-        queue<int> q; 
-        vector<vector<int>> adjMat(numCourses);
-        vector<int> indegree(numCourses); 
-        for(auto& courses:prerequisites){
-            int c1 = courses[0];
-            int c2 = courses[1]; 
-            adjMat[c2].push_back(c1);
-            indegree[c1]++; 
-        }
-
-        for(int i=0;i<numCourses;i++){
-            if(!indegree[i]){
-                q.push(i); 
-            } 
-        } 
-        int cnt =0;
-        while(q.size()){
-            int top = q.front(); 
-            cnt++; 
-            q.pop();
-            for(auto& child:adjMat[top]){
-                indegree[child]--; 
-                if(!indegree[child]) q.push(child);
+    bool dfs(vector<vector<int>>& adjMat,int course,
+            vector<int>& visited,vector<int>& pathvisited)
+    {
+        visited[course]=1;
+        pathvisited[course]=1;
+        for(auto& n:adjMat[course]){
+            if(visited[n]!=-1){
+                if(pathvisited[n]==1) return true;
+            }
+            else{
+                if(dfs(adjMat,n,visited,pathvisited)) return true; 
             }
         }
+        pathvisited[course]=-1;
+        return false;
+    }
 
-        return cnt == numCourses;
+    bool canFinish(int n, vector<vector<int>>& prereq) {
+        // 1. Detect loop using DFS 
+        // 2. its would be the same thing how we do normal dfs 
+        // 3. we have an addition of path visited because to different path can 
+        // end up at the same node doesn't need to form a cycle 
+        // 4. so Ideally only if an node is visited & path visited then it is valid
+        // 5. during back tracking set pathvisited back to 0 or -1 
+        vector<int> visited(n,-1),pathvisited(n,-1); 
+        vector<vector<int>> adjMat(n); 
 
+        for(auto& course:prereq){
+            int c1 = course[0]; 
+            int c2 = course[1]; 
+            adjMat[c2].push_back(c1);
+        }
+
+        for(int i=0;i<n;i++){
+            if(visited[i]==-1){
+                bool res = dfs(adjMat,i,visited,pathvisited); 
+                if(res) return false;
+            }
+        }
+        return true; 
     }
 };
