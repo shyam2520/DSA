@@ -2,68 +2,70 @@ class DLLNode{
     public: 
     int key,val;
     DLLNode *next,*prev;
-    DLLNode(int key,int val){
-        this->key = key;
-        this->val = val;
-        this->next = NULL;
-        this->prev = NULL;
+
+    DLLNode(int key,int value){
+        this->key=key;
+        this->val=value;
+        this->next=NULL;
+        this->prev=NULL;
     }
 };
+
 class LRUCache {
 public:
+    DLLNode *head=new DLLNode(-1,-1);
+    DLLNode *tail=new DLLNode(-1,-1);
     int cap;
-    DLLNode *head,*tail;
-    unordered_map<int, DLLNode*> umap;
-    LRUCache(int capacity){
+    unordered_map<int,DLLNode*> dict;
+
+    LRUCache(int capacity) {
         this->cap = capacity;
-        this->head = new DLLNode(-1,-1);
-        this->tail = new DLLNode(-1,-1);
-        this->head->next = tail;
-        this->tail->prev = head;
+        head->next=tail;
+        tail->prev=head;
     }
     
-    void insertAfterHead(DLLNode* node){
-        DLLNode *nextNode = head->next;
-        node->prev = head;
-        node->next = nextNode;
-        head->next = node;
-        nextNode->prev = node;
+    void deleteNode(DLLNode *node){
+        DLLNode *prevNode = node->prev;
+        DLLNode *nextNode = node->next;
+        prevNode->next=nextNode;
+        nextNode->prev=prevNode;
     }
 
-    void deleteNode(DLLNode* node){
-        DLLNode* prevNode = node->prev;
-        DLLNode* nextNode = node->next; 
-        prevNode->next = nextNode;
-        nextNode->prev = prevNode;
-        // delete(node);
+    void insertAfterHead(DLLNode *node){
+        DLLNode *headNext = head->next; 
+        head->next=node;
+        node->prev=head;
+        node->next=headNext;
+        headNext->prev=node;
     }
 
     int get(int key) {
-        if(umap.find(key)==umap.end()) {
-            return -1;
+        // return 0;
+        if(dict.count(key)){
+            DLLNode *node=dict[key];
+            deleteNode(node);
+            insertAfterHead(node);
+            return dict[key]->val;
         }
-        else{
-            deleteNode(umap[key]);
-            insertAfterHead(umap[key]);
-            return umap[key]->val;
-        }
+        return -1;
     }
     
     void put(int key, int value) {
-        if(umap.find(key)==umap.end()){
+        if(!dict.count(key)){
             DLLNode *node = new DLLNode(key,value);
             insertAfterHead(node);
-            umap[key]=node;
+            dict[key]=node;
         }
         else{
-            deleteNode(umap[key]);
-            umap[key]->val = value;
-            insertAfterHead(umap[key]);
+            DLLNode* node = dict[key];
+            deleteNode(node);
+            insertAfterHead(node);
+            node->val=value;
         }
-        if(umap.size()>cap){
-            DLLNode *delNode = tail->prev;
-            deleteNode(delNode);
-            umap.erase(delNode->key);
+        if(dict.size()>cap){
+            DLLNode *node = tail->prev;
+            dict.erase(node->key);
+            deleteNode(node);
         }
     }
 };
