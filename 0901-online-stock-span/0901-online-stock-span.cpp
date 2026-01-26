@@ -7,12 +7,12 @@ public:
     
     int next(int price) {
         int idx=pge.size()-1;
-        while(pge.size() && idx!=-1 && price>=prices[idx]){
+        while(pge.size() && price>=prices[idx]){
             idx=pge[idx];
         }
         prices.push_back(price);
         pge.push_back(idx);
-        return pge.size()-(pge.back()+1);
+        return prices.size()-(pge.back()+1);
     }
 };
 
