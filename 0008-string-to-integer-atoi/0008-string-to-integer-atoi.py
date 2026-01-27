@@ -1,10 +1,9 @@
 class Solution:
     def myAtoi(self, s: str) -> int:
         s=s.strip() 
-        if not(s): 
-            return 0
+
         neg = False 
-        if s[0]=='-' or s[0]=='+':
+        if len(s) and (s[0]=='-' or s[0]=='+'):
             if s[0]=='-':
                 neg=True 
             s=s[1:]
