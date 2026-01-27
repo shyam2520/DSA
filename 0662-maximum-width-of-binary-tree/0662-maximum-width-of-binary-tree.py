@@ -1,39 +1,30 @@
 # Definition for a binary tree node.
-# class TreeNode(object):
+# class TreeNode:
 #     def __init__(self, val=0, left=None, right=None):
 #         self.val = val
 #         self.left = left
 #         self.right = right
-
 class Solution:
-     def widthOfBinaryTree(self, root):
-        if not root:
-            return 0
+
+    def dfs(self,node,coord,ridx,nodemap): 
+        if node is None: 
+            return 
         
-        max_width = 1
-        queue = deque([root])
-        index_queue = deque([1])
+        if ridx in nodemap: 
+            l,r = nodemap[ridx] 
+            nodemap[ridx]=(min(l,coord),max(r,coord))
+        else: 
+            nodemap[ridx]=(coord,coord)
         
-        while queue:
-            level_size = len(queue)
-            left_index, right_index = 0, 0
-            
-            for i in range(level_size):
-                node = queue.popleft()
-                index = index_queue.popleft()
-                
-                if i == 0:
-                    left_index = index
-                if i == level_size - 1:
-                    right_index = index
-                
-                if node.left:
-                    queue.append(node.left)
-                    index_queue.append(index * 2)
-                if node.right:
-                    queue.append(node.right)
-                    index_queue.append(index * 2 + 1)
-            
-            max_width = max(max_width, right_index - left_index + 1)
-        
-        return max_width
+        self.dfs(node.left,2*coord,ridx+1,nodemap) 
+        self.dfs(node.right,2*coord+1,ridx+1,nodemap)
+
+
+    def widthOfBinaryTree(self, root: Optional[TreeNode]) -> int:
+        nodemap = {} 
+        self.dfs(root,1,1,nodemap)
+        res = 0 
+        for k,coords in nodemap.items(): 
+            l,r=coords 
+            res = max(res,r-l+1)
+        return res 
