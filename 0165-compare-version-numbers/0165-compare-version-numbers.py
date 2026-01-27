@@ -1,12 +1,19 @@
 class Solution:
     def compareVersion(self, version1: str, version2: str) -> int:
-        v1=list(map(lambda x:int(x),version1.split(".")))
-        v2=list(map(lambda x:int(x),version2.split(".")))
-        for i in range(max(len(v1),len(v2))):
-            a = v1[i] if i<len(v1) else 0 
-            b = v2[i] if i<len(v2) else 0 
-            if a>b: 
-                return 1 
-            elif a<b: 
-                return -1  
+        m,n = len(version1),len(version2)
+        i,j = 0,0 
+        while i<m or j<n: 
+            v1,v2 =0,0 
+            while i<m and version1[i]!='.':
+                v1=v1*10+int(version1[i]) 
+                i+=1
+            while j<n and version2[j]!='.':
+                v2=v2*10+int(version2[j])
+                j+=1
+            if v1>v2:
+                return 1
+            elif v2>v1:
+                return -1 
+            i+=1 
+            j+=1
         return 0
