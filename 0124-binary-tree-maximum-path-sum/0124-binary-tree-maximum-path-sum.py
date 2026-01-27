@@ -12,7 +12,7 @@ class Solution:
         lst = self.dfs(node.left,res)
         rst = self.dfs(node.right,res)
         curr = node.val 
-        res[0]=max(res[0],lst,rst,node.val+lst,node.val,node.val+rst,node.val+lst+rst)
+        res[0]=max(res[0],node.val+lst,node.val,node.val+rst,node.val+lst+rst)
         return max(node.val+lst,node.val+rst,node.val)
 
 
