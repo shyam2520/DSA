@@ -12,11 +12,9 @@
 class Solution {
 public:
     int countNodes(TreeNode* root) {
-        return dfs(root);
-    }
+        if(!root) return 0;
+        // if(root) return 1;
+        return 1+countNodes(root->left)+countNodes(root->right);
 
-    int dfs(TreeNode* node){
-        if(!node) return 0; 
-        return 1+dfs(node->left) + dfs(node->right);
     }
 };
