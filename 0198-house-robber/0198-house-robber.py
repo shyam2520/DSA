@@ -14,13 +14,16 @@ class Solution:
         n = len(nums) 
         dp=[-1]*n 
         res = 0
+        next1,next2=None,None 
         for i in range(n-1,-1,-1):
             take,notake = nums[i],0
             if i+2<n: 
-                take+=dp[i+2]
+                take+=next2
             if i+1<n:
-                notake+=dp[i+1]
-            dp[i]=max(take,notake)
-            res=max(res,dp[i])
+                notake+=next1
+            curr=max(take,notake)
+            res=max(res,curr)
+            next2=next1 
+            next1=curr
         return res
         # return self.house(nums,0,dp)
