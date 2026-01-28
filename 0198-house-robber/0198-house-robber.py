@@ -13,4 +13,14 @@ class Solution:
     def rob(self, nums: List[int]) -> int:
         n = len(nums) 
         dp=[-1]*n 
-        return self.house(nums,0,dp)
+        res = 0
+        for i in range(n-1,-1,-1):
+            take,notake = nums[i],0
+            if i+2<n: 
+                take+=dp[i+2]
+            if i+1<n:
+                notake+=dp[i+1]
+            dp[i]=max(take,notake)
+            res=max(res,dp[i])
+        return res
+        # return self.house(nums,0,dp)
