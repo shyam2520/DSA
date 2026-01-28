@@ -12,7 +12,6 @@ class Solution:
 
     def rob(self, nums: List[int]) -> int:
         n = len(nums) 
-        dp=[-1]*n 
         res = 0
         next1,next2=None,None 
         for i in range(n-1,-1,-1):
