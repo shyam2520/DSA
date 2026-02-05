@@ -1,45 +1,54 @@
 class Solution {
 public:
     long long subArrayRanges(vector<int>& nums) {
-        // calcuaate sum(total_max) - sum(total_min) = res 
-        // nse, dp -> total sub array min
-        // repeat tot subarray max 
+        stack<int> gstack,sstack;   
+        // subarray ranges = sum_of(subarray_max) - sum_of(subarr_min);
+        // get nextGreater & nextSmaller elment subtract those sums; 
         int n = nums.size();
-        stack<int> stack;
-        vector<int> nse(n,n),nge(n,n);
-        vector<long long> mins(n),maxs(n);
+        vector<int> nge(n,-1),nse(n,-1);
+        vector<long long> smax(n,-1),smin(n,-1);
         for(int i=0;i<n;i++){
-            while(stack.size() && nums[i]<nums[stack.top()]){
-                int idx = stack.top();
-                stack.pop();
-                nse[idx]=i;
+            while(gstack.size() && nums[gstack.top()]<nums[i]){
+                nge[gstack.top()]=i;
+                gstack.pop();
             }
-            stack.push(i);
+            gstack.push(i);
+            while(sstack.size() && nums[sstack.top()]>nums[i]){
+                nse[sstack.top()]=i;
+                sstack.pop();
+            }
+            sstack.push(i);
         }
+        
         for(int i=n-1;i>=0;i--){
-            if(nse[i]==n) mins[i]=(long long)nums[i]*(long long)(n-i);
-            else mins[i] = (long long)nums[i]*(long long)(nse[i]-i) + mins[nse[i]];
-        }
-        long long total_mins = 0;
-        for(auto& i:mins) total_mins+=i;
+            int ngeidx = nge[i];
+            int nseidx = nse[i];
+            if(ngeidx!=-1){
+                long long a = (long long)nums[i]*(long long)(ngeidx-i);
+                // int b = nums[ngeidx]*(n-i);
+                smax[i]=a+smax[ngeidx];
+            }
+            else{
+                smax[i]=(long long)nums[i]*(long long)(n-i);
+            }
 
-        // maxs 
-        while(stack.size()) stack.pop();
+            if(nseidx!=-1){
+                long long a=(long long)nums[i]*(long long)(nseidx-i);
+                smin[i]=a+smin[nseidx];
+            }
+            else{
+                smin[i]=(long long)nums[i]*(long long)(n-i);
+            }
+        }
+
+        long long sum_max=0,sum_min=0;
+
         for(int i=0;i<n;i++){
-            while(stack.size() && nums[i]>nums[stack.top()]){
-                int idx = stack.top();
-                stack.pop();
-                nge[idx]=i;
-            }
-            stack.push(i);
+            sum_max+=smax[i];
+            sum_min+=smin[i];
         }
-        for(int i=n-1;i>=0;i--){
-            if(nge[i]==n) maxs[i]=(long long)nums[i]*(long long)(n-i);
-            else maxs[i] = (long long)nums[i]*(long long)(nge[i]-i) + maxs[nge[i]];
-        }
-        long long total_maxs=0;
-        for(auto& i:maxs) total_maxs+=i;
 
-        return total_maxs-total_mins;
+        return sum_max-sum_min;
+
     }
 };
