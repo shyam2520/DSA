@@ -9,35 +9,32 @@
  *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
  * };
  */
-
-class compare{
-    public: 
-    using pii = pair<int,int>;
-    bool operator()(const pii& a,const pii& b){
-        if(a.first==b.first) return a.second<b.second;
-        return a.first<b.first;       
-    }
-};
 class Solution {
 public:
-    using pii=pair<int,int>;
-    vector<vector<int>> verticalTraversal(TreeNode* root) {
-        map<int,vector<pii>> dict;
-        vector<vector<int>> res;
-        verticaldfs(root,dict,0,0);
-        for(auto& i:dict){
-            sort(begin(i.second),end(i.second));
-            vector<int> temp;
-            for(auto& val:i.second) temp.push_back(val.second);
-            res.push_back(temp);
-        } 
-        return res;
+    map<int,vector<pair<int,int>>> dict; //col->{{row,val}}
+    
+    void dfs(TreeNode* node,int rowidx,int colidx){
+        if(!node) return ;
+        // if(!dict.count(colidx)) dict[colidx]=
+        dict[colidx].push_back({rowidx,node->val});
+        dfs(node->left,rowidx+1,colidx-1);
+        dfs(node->right,rowidx+1,colidx+1);
     }
 
-    void verticaldfs(TreeNode* node,map<int,vector<pii>>& dict,int cidx,int ridx){
-        if(!node) return ;
-        dict[cidx].push_back({ridx,node->val});
-        verticaldfs(node->left,dict,cidx-1,ridx+1);
-        verticaldfs(node->right,dict,cidx+1,ridx+1);
+    vector<vector<int>> verticalTraversal(TreeNode* root) {
+        // 0 -> {{1},{5,6}}
+        // 0,0 -> 1,-1, 1,1 
+        dfs(root,0,0);
+        // using dictionary to get result
+        vector<vector<int>> ans;
+        for(auto& i:dict){ 
+            // (2,5),(2,6)
+            vector<int> temp;
+            vector<pair<int,int>> res = i.second; 
+            sort(begin(res),end(res));
+            for(auto& val:res) temp.push_back(val.second);
+            ans.push_back(temp);
+        }
+        return ans;
     }
 };
