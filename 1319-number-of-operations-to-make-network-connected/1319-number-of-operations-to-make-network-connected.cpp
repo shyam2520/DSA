@@ -7,7 +7,16 @@ class DisjointSet{
         for(int i=0;i<n;i++) parent.push_back(i);
     }
 
-    int getSize(int idx){ return size[idx];}
+    int getMaxParent(){ 
+        int max_parent=-1;
+        for(int i=0;i<parent.size();i++){
+            if(max_parent==-1 || size[i]>size[max_parent]){
+                max_parent=i;
+            }
+        }
+        return max_parent;
+
+    }
     int findParent(int n){
         if(parent[n]==n) return n;
         // cout<<n<<endl;
@@ -46,13 +55,14 @@ public:
             }
             ds.unionBySize(u,v);
         }
-
+        int max_parent=ds.getMaxParent();
         for(int i=0;i<n;i++){
-            if(ds.findParent(i)==i && ds.getSize(i)==1) disconnect++;
+            int parent = ds.findParent(i);
+            if(parent==i && parent!=max_parent) disconnect++;
         }
-
         if(extras>=disconnect) return min(extras,disconnect);
         return -1;
+       
 
     }
 };
