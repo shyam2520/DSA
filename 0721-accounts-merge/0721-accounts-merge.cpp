@@ -1,79 +1,71 @@
-class DisjointSet{
-    private: 
-    unordered_map<string,string> parent;// email->emal 
-    unordered_map<string,int> size; 
+class DisjointSet {
+    vector<int> parent, size;
     public:
-    DisjointSet(){}
-    string getParent(string n){
-        if(!parent.count(n) || parent[n]==n){
-            parent[n]=n;
+    DisjointSet(int n) {
+        size.resize(n, 1);
+        for (int i = 0; i < n; i++)
+            parent.push_back(i);
+    }
+    int getParent(int n) {
+        if (parent[n] == n)
             return n;
-        } 
-        parent[n]=getParent(parent[n]);
-        return parent[n];
+        return parent[n] = getParent(parent[n]);
     }
 
-    void unionBySize(string u,string v){
-        string ultp_u = getParent(u);
-        string ultp_v = getParent(v); 
-        if(ultp_u==ultp_v) return ;
-        int size_u = size.count(ultp_u)?size[ultp_u]:1;
-        int size_v = size.count(ultp_v)?size[ultp_v]:1;
-        if(size_u<size_v){
-            parent[ultp_u]=ultp_v;
-            size[ultp_v]+=size_u;
+    void unionBySize(int u, int v) {
+        int ultp_u = getParent(u);
+        int ultp_v = getParent(v);
+        if (ultp_u == ultp_v) return;
+        int sizeu = size[ultp_u];
+        int sizev = size[ultp_v];
+        if(sizeu<sizev){
+            parent[ultp_u]=ultp_v; 
+            size[ultp_v]+=sizeu;
         }
         else{
-            parent[ultp_v]=ultp_u;
-            size[ultp_u]+=size_v;
+            parent[ultp_v]=ultp_u; 
+            size[ultp_u]+=sizev;
         }
+
     }
 };
 
 class Solution {
 public:
-    vector<vector<string>> accountsMerge(vector<vector<string>>& accounts) {
-        DisjointSet ds = DisjointSet();
-        unordered_map<string,string> email_name;
-        for(auto& acc:accounts){
-            string name=acc[0];
-            string u = acc[1]; 
-            email_name[u]=name;
-            // in case there is only one email it needs to exists ds so thats why 
-            if(acc.size()==2) ds.unionBySize(u,u);
-            for(int i=2;i<acc.size();i++){
-                ds.unionBySize(u,acc[i]);
-                email_name[acc[i]]=name;
+    vector<vector<string>> accountsMerge(vector<vector<string>>& accounts){
+        unordered_map<string,int> mapMail;
+        DisjointSet ds(accounts.size());
+        for(int i=0;i<accounts.size();i++){
+            for(int j=1;j<accounts[i].size();j++){
+                if(!mapMail.count(accounts[i][j])){
+                    mapMail[accounts[i][j]]=i;
+                }
+                else{
+                    int node=mapMail[accounts[i][j]];
+                    ds.unionBySize(node,i);
+                }
             }
         }
-        // unordered_map<string,int> parents; 
-        // for(auto& acc:account){
-        //     for(int i=1;i<acc.size();i++){
-        //         if(ds.getParent(acc[i])==acc[i]) parents[acc[i]]++;
-        //     }
-        // }
-
-        unordered_map<string,vector<string>> pc; 
-        for(auto& acc:accounts){
-            for(int i=1;i<acc.size();i++){
-                string parent = ds.getParent(acc[i]); 
-                if(!pc.count(parent)) pc[parent]={};
-                if(parent!=acc[i]) pc[parent].push_back(acc[i]);
-            }
+        int n = accounts.size();
+        vector<vector<string>> mails(n); 
+        for(auto& data:mapMail){
+            string mail=data.first;
+            int node = data.second; 
+            int ultp = ds.getParent(node);
+            mails[ultp].push_back(mail); 
         }
-
         vector<vector<string>> res;
-        for(auto& i:pc){
-            string acc_name = email_name[i.first];
-            vector<string> emails = i.second; // apart from parent 
-            emails.push_back(i.first);
-            sort(begin(emails),end(emails));
-
-            emails.insert(emails.begin(),acc_name);
-            res.push_back(emails);
-        }
-
+        for(int i=0;i<n;i++){
+            string name = accounts[i][0];
+            if(!mails[i].size()) continue;
+            vector<string> temp ={name}; 
+            vector<string> m = mails[i];
+            sort(begin(m),end(m));
+            for(auto& mail:m) temp.push_back(mail);
+            res.push_back(temp);
+        }   
 
         return res;
+
     }
 };
