@@ -1,14 +1,15 @@
 class Solution {
 public: 
-    int recursion(int idx,vector<int>& dp){
-        if(idx<0) return 0;
-        if(idx==0) return 1; 
-        if(dp[idx]!=-1) return dp[idx];
-        return dp[idx]=recursion(idx-1,dp)+recursion(idx-2,dp);
-    }
-
     int climbStairs(int n) {
-        vector<int> dp(n+1,-1);
-        return recursion(n,dp);
+        if(n<2) return 1;
+        int second_prev=-1,prev=1;
+        int curr=0;
+        for(int i=1;i<=n;i++){
+            curr=prev;
+            if(i>1) curr+=second_prev;
+            second_prev=prev;
+            prev=curr;
+        }
+        return curr;
     }
 };
