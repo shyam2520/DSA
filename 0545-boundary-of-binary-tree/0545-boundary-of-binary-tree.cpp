@@ -6,45 +6,44 @@
  *     TreeNode *right;
  *     TreeNode() : val(0), left(nullptr), right(nullptr) {}
  *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
- *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left),   right(right) {}
+ *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
  * };
  */
 class Solution {
 public:
     vector<int> res;
     vector<int> boundaryOfBinaryTree(TreeNode* root) {
+        if(!root) return {};
         res.push_back(root->val);
-        // left 
         dfs(root->left,'l');
-        // right
         dfs(root->right,'r');
         return res;
     }
 
-    void dfs(TreeNode* node,char d){
-        if(!node) return;
-        char temp;
-        if(d == 'l'){
+    void dfs(TreeNode* node,char dir){
+        if(!node) return ;
+        if(!node->left && !node->right){
             res.push_back(node->val);
-            if(node->left) dfs(node->left,d);
-            if(node->right){
-                // no left then it left boundary
-                temp=node->left?'-':d;
-                dfs(node->right,temp);
-            }
-        } 
-        else if(d=='r'){
-            if(node->left){
-                temp = node->right?'-':d;
-                dfs(node->left,temp);
-            }
-            if(node->right) dfs(node->right,d);
+            return;
+        }
+        // left
+        if(dir=='l'){
             res.push_back(node->val);
+            dfs(node->left,dir);
+            char new_dir = node->left?'-':'l';
+            dfs(node->right,new_dir);
+            return;
         }
-        else{
-            if(!node->left && !node->right) res.push_back(node->val);
-            dfs(node->left,d);
-            dfs(node->right,d);
+        // right 
+        if(dir=='r'){
+            char new_dir=node->right?'-':'r';
+            dfs(node->left,new_dir);
+            dfs(node->right,dir);
+            res.push_back(node->val);
+            return;
         }
+        // null 
+        dfs(node->left,dir);
+        dfs(node->right,dir);
     }
 };
