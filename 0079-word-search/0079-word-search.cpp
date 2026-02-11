@@ -1,27 +1,31 @@
 class Solution {
 public:
-    bool search(vector<vector<char>>& board,map<pair<int,int>,bool>& umap,int i,int j,int idx,string& word){
-        if(idx==word.size()) return true;
-        if(i<0 || j<0 || i==board.size() || j==board[0].size() || umap[{i,j}] || board[i][j]!=word[idx]) return false;
-
-        umap[{i,j}]=true;
-        bool res = search(board,umap,i+1,j,idx+1,word) ||
-        search(board,umap,i-1,j,idx+1,word) ||
-        search(board,umap,i,j-1,idx+1,word) ||
-        search(board,umap,i,j+1,idx+1,word);
-        umap[{i,j}]=false;
-        return res;
-    }
     bool exist(vector<vector<char>>& board, string word) {
-        map<pair<int,int>,bool> umap;
-        // forloop to find the first char and then expand
-        for(int i=0;i<board.size();i++){
-            for(int j=0;j<board[0].size();j++){
-                if(board[i][j]==word[0] && search(board,umap,i,j,0,word)){
+        // dfs
+        int m = board.size(), n = board[0].size();
+        for (int i = 0; i < m; i++) {
+            for (int j = 0; j < n; j++) {
+                if(board[i][j]==word[0] && dfs(board,i,j,word,0)){
                     return true;
-                } 
+                }
             }
         }
         return false;
+    }
+
+    bool dfs(vector<vector<char>>& board, int i, int j, string& word, int idx) {
+        if (idx == word.size())
+        {    return true;}
+        if (i < 0 || j < 0 || i == board.size() || j == board[0].size() ||
+            board[i][j] != word[idx])
+        {    return false;}
+        char ch = board[i][j];
+        board[i][j] = '-';
+        bool res = dfs(board, i + 1, j, word, idx + 1) ||
+                   dfs(board, i - 1, j, word, idx + 1) ||
+                   dfs(board, i, j + 1, word, idx + 1) ||
+                   dfs(board, i, j - 1, word, idx + 1);
+        board[i][j]=ch;
+        return res;
     }
 };
