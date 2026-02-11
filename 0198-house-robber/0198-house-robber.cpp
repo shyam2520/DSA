@@ -11,12 +11,15 @@ public:
         if(nums.size()<2) return nums.back();
         int n = nums.size();
         vector<int> dp(n,0);
-        dp[0]=nums[0];
-        dp[1]=max(nums[0],nums[1]);
+        // dp[0]=nums[0];
+        int prev2 = nums[0];
+        int prev1=max(nums[0],nums[1]);
         for(int i=2;i<nums.size();i++){
-            dp[i]=max(nums[i]+dp[i-2],dp[i-1]);
+            int curr=max(nums[i]+prev2,prev1);
+            prev2=prev1;
+            prev1=curr;
         }
-        return dp.back();
+        return prev1;
         // return houserob(nums,n-1);
     }
 };
