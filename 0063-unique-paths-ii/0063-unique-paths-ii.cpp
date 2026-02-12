@@ -1,15 +1,21 @@
 class Solution {
 public:
-    int paths(vector<vector<int>>& grid,int i,int j,vector<vector<int>>& dp)
-    {
-        if(i==grid.size() || j==grid[0].size() || grid[i][j]==1) return 0; 
-        if(i==grid.size()-1 && j==grid[0].size()-1) return 1;
-        if(dp[i][j]!=-1) return dp[i][j];
-        return dp[i][j]=paths(grid,i+1,j,dp)+paths(grid,i,j+1,dp);
-    }
+    int mod = 2*1e9;
     int uniquePathsWithObstacles(vector<vector<int>>& grid) {
         // dfs + dp 
-        vector<vector<int>> dp(grid.size(),vector<int>(grid[0].size(),-1));
-        return paths(grid,0,0,dp);
+        int m=grid.size(),n=grid[0].size(); 
+        vector<vector<int>> dp(m,vector<int>(n,0));
+        for(int i=m-1;i>=0;i--){
+            for(int j=n-1;j>=0;j--){
+                if(grid[i][j]==1) continue;
+                if(i==m-1 && j==n-1) dp[i][j]=1;
+                else{
+                    dp[i][j]=((long)((i+1<m?dp[i+1][j]:0)%mod)+(long)((j+1<n?dp[i][j+1]:0)%mod))%mod;
+                }
+            }
+        }
+        return dp[0][0];
+
+        // return paths(grid,0,0,dp);
     }
 };
