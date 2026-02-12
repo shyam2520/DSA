@@ -1,15 +1,15 @@
 class Solution {
 public:
-    int uniquePathsWithObstacles(vector<vector<int>>& grid) {
-        vector<vector<int>> visited(100,vector<int>(100,-1));
-        return dfs(grid,visited,0,0);
+    int paths(vector<vector<int>>& grid,int i,int j,vector<vector<int>>& dp)
+    {
+        if(i==grid.size() || j==grid[0].size() || grid[i][j]==1) return 0; 
+        if(i==grid.size()-1 && j==grid[0].size()-1) return 1;
+        if(dp[i][j]!=-1) return dp[i][j];
+        return dp[i][j]=paths(grid,i+1,j,dp)+paths(grid,i,j+1,dp);
     }
-
-    int dfs(vector<vector<int>>& grid,vector<vector<int>>& visited,int i,int j){
-        if(i==grid.size() || j==grid[0].size() || grid[i][j]==1) return 0;
-        if(i==grid.size()-1 && j==grid[0].size()-1) return 1; 
-        if(visited[i][j]!=-1) return visited[i][j];
-        visited[i][j]=dfs(grid,visited,i,j+1)+dfs(grid,visited,i+1,j);
-        return visited[i][j];
+    int uniquePathsWithObstacles(vector<vector<int>>& grid) {
+        // dfs + dp 
+        vector<vector<int>> dp(grid.size(),vector<int>(grid[0].size(),-1));
+        return paths(grid,0,0,dp);
     }
 };
