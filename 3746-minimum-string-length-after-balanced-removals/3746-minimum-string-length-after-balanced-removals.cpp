@@ -1,17 +1,18 @@
 class Solution {
 public:
     int minLengthAfterRemovals(string s) {
-        string res = "";
+        // string res = "";
+        int acnt=0,bcnt=0;
         for(auto& ch:s){
             if(ch=='a'){
-                if(res.size() && res.back()=='b') res.pop_back();
-                else res.push_back(ch);
+                if(bcnt) bcnt--;
+                else acnt++;
             }
             else{
-                if(res.size() && res.back()=='a') res.pop_back();
-                else res.push_back(ch);
+                if(acnt) acnt--;
+                else bcnt++;
             }
         }
-        return res.size();
+        return acnt+bcnt;
     }
 };
