@@ -19,8 +19,20 @@ public:
         for(auto& i:nums) total+=i;
         if(total%2) return false;
         int target = total/2;
+        int n = nums.size();
         sort(begin(nums),end(nums));
-        vector<vector<int>> dp(nums.size()+1,vector<int>(target+1,-1));
-        return subsetExists(nums,0,dp,target);
+        vector<vector<bool>> dp(n+1,vector<bool>(target+1,false));
+        for(int i=0;i<=n;i++) dp[i][0]=true;
+
+        for(int i=n-1;i>=0;i--){
+            for(int j=1;j<=target;j++){
+                if(nums[i]<=j) {
+                    dp[i][j]=dp[i+1][j-nums[i]]||dp[i+1][j];
+                }
+                else dp[i][j]=false;
+            }
+        }
+        return dp[0][target];
+        // return subsetExists(nums,0,dp,target);
     }
 };
