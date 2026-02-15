@@ -40,8 +40,9 @@ public:
         
         DisjointSet ds(n);
         int extras =0;
-
-        for(auto& edge:connections)
+        
+        int cmpcnt=n;
+        for(auto& edge:connections)//e
         {
             int u = edge[0];
             int v = edge[1];
@@ -52,12 +53,12 @@ public:
                 continue;
             }
             ds.unionBySize(ultp_u,ultp_v);
+            cmpcnt--;
         }
 
-        int cmpcnt=0;
-        for(int i=0;i<n;i++){
-            if(ds.getParent(i)==i) cmpcnt++;
-        }
+        // for(int i=0;i<n;i++){
+        //     if(ds.getParent(i)==i) cmpcnt++;
+        // }
 
         if(cmpcnt-1>extras) return -1;
         return min(extras,cmpcnt-1);
