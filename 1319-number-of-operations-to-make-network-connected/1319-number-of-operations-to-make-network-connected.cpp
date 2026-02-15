@@ -36,9 +36,13 @@ public:
         // check if ultp are same if increment extras cnt 
         // if not unionBySize
         // get componentcnt -> min(extras,cmpcnt)
+        if(connections.size()<n-1) return -1;
+        
         DisjointSet ds(n);
         int extras =0;
-        for(auto& edge:connections) {
+
+        for(auto& edge:connections)
+        {
             int u = edge[0];
             int v = edge[1];
             int ultp_u = ds.getParent(u);
@@ -49,6 +53,7 @@ public:
             }
             ds.unionBySize(ultp_u,ultp_v);
         }
+
         int cmpcnt=0;
         for(int i=0;i<n;i++){
             if(ds.getParent(i)==i) cmpcnt++;
