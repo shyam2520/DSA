@@ -21,7 +21,18 @@ public:
     int change(int amount, vector<int>& coins){
         sort(begin(coins),end(coins)); 
         int m=coins.size();
-        vector<vector<int>> dp(m,vector<int>(amount+1,-1));
-        return recursion(coins,0,amount,dp);    
+        vector<vector<int>> dp(m+1,vector<int>(amount+1,0));
+        // return recursion(coins,0,amount,dp);    
+        dp[m][0]=1;
+        for(int idx=m-1;idx>=0;idx--){
+            for(int amt=0;amt<=amount;amt++){
+                if(coins[idx]>amt) dp[idx][amt]=dp[idx+1][amt];
+                else{
+                    dp[idx][amt]=(long)dp[idx][amt-coins[idx]]+(long)dp[idx+1][amt];
+                }
+            }
+        }
+
+        return dp[0][amount];
     }
 };
