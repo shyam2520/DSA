@@ -4,7 +4,7 @@ public:
         if(l>r) return 0;
         if(l==r) return 1; 
         if(dp[l][r]!=-1) return dp[l][r];
-        if(s[l]==s[r]) return 2+recursion(s,l+1,r-1,dp);
+        if(s[l]==s[r]) return dp[l][r]=2+recursion(s,l+1,r-1,dp);
         return dp[l][r]=max(
             recursion(s,l+1,r,dp),
             recursion(s,l,r-1,dp)
