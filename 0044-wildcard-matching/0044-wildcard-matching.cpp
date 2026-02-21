@@ -8,7 +8,6 @@ public:
             return false;
         }
         if(dp[i][j]!=-1) return dp[i][j]>0;
-        // if(j==p.length() || i==s.length()) return false;
         if(p[j]=='*') {
             dp[i][j]=patternMatch(s,p,i+1,j,dp) || patternMatch(s,p,i+1,j+1,dp) || patternMatch(s,p,i,j+1,dp); // consider as empty
             return dp[i][j]>0;
@@ -22,12 +21,9 @@ public:
     }
 
     bool isMatch(string s,string p){
-        if(!s.length()){
-            for(auto& i:p) if(i!='*') return false;
-            return true;
-        }
         int m = s.length(),n =p.length();
-        vector<vector<int>> dp(m,vector<int>(n,-1));
+        vector<vector<int>> dp(m+1,vector<int>(n+1,-1));
         return patternMatch(s,p,0,0,dp);
+
     }
 };
