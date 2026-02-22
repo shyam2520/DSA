@@ -12,64 +12,74 @@ public:
 
     // Encodes a tree to a single string.
     string serialize(TreeNode* root) {
-        // we will do level order traversal make it to string 
-        // 1. we will push each node left & right to queue
-        // 2. we will push NULL values also till the leaf node
+        // return "";
+        // level order travrsel till last flag is true 
+        // push null only for existing noes
+        queue<TreeNode*> q;
         if(!root) return "";
-        queue<TreeNode*> q; 
-        q.push(root); 
-        string res = "";
-        bool not_null=true;
-        while(q.size() && not_null){
+        q.push(root);
+        string res="";
+        bool flag = true;
+        while(q.size() && flag){
+            flag=false;
             int n = q.size();
-            not_null = false; 
             for(int i=0;i<n;i++){
-                TreeNode* top = q.front();
+                TreeNode* front = q.front();
                 q.pop();
-
-                res+=top?to_string(top->val)+",":"null,";
-                if(top){
-                    if(top->left || top->right) not_null=true;
-                    q.push(top->left);
-                    q.push(top->right);
-                }
+                if(!front){
+                    res+="N,";
+                    continue;
+                } 
+                else res+=to_string(front->val)+",";
+                q.push(front->left);
+                q.push(front->right);
+                if(front->left || front->right){
+                    flag=true;
+                } 
             }
         }
         res.pop_back();
-        cout<<res<<endl;
+        // cout<<res<<endl;
         return res;
     }
 
     // Decodes your encoded data to tree.
     TreeNode* deserialize(string data) {
+        // push the first value into queue every 2 indices would be the left & right 
+        // if null node don't push to queue
+        if(data=="") return NULL;
         stringstream ss(data);
         string temp;
-        // vector<string> tempres;
+        queue<TreeNode*> q; 
         vector<TreeNode*> nodes;
         while(std::getline(ss,temp,',')){
-            if(temp=="null") nodes.push_back(NULL);
-            else {
-                nodes.push_back(new TreeNode(stoi(temp)));
-            }
+            if(temp=="N") nodes.push_back(NULL);
+            else nodes.push_back(new TreeNode(stoi(temp)));
         }
-
-        if(!nodes.size()) return {};
+        
+        
         TreeNode* root = nodes.front();
-        queue<TreeNode*> q; 
         q.push(root);
-        for(int i=1;i<nodes.size();i++){
-            q.front()->left=nodes[i];
-            if(nodes[i]){
-                q.push(nodes[i]);
-            }
-            i++; 
-            if(i<nodes.size()){
-                q.front()->right = nodes[i]; 
-                if(nodes[i]) q.push(nodes[i]);
-            }
+        int i=1;
+        TreeNode* curr;
+        while(i<nodes.size()){
+            TreeNode* front = q.front();
             q.pop();
+            // left
+            if(i<nodes.size()){
+                curr=nodes[i++];
+                front->left =curr;
+                if(curr) q.push(curr);
+            }
+            // right
+            if(i<nodes.size()){
+                curr=nodes[i++];
+                front->right=curr;
+                if(curr) q.push(curr);
+            }
+
         }
-        return nodes[0];
+        return root;
     }
 };
 
