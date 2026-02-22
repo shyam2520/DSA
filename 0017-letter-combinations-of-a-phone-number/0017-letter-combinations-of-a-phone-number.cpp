@@ -1,22 +1,21 @@
 class Solution {
 public:
     vector<string> res;
-    void combinations(string& digits,int idx, string comb,vector<string>& dict){
+    unordered_map<int,string> dict = {
+        {2,"abc"},{3,"def"},{4,"ghi"},{5,"jkl"},{6,"mno"},
+        {7,"pqrs"},{8,"tuv"},{9,"wxyz"}
+    };
+    void generateCombs(string& digits,int idx,string temp){
         if(idx==digits.size()) {
-            res.push_back(comb);
-            return ;
+            res.push_back(temp);
+            // return res;
         }
-
         for(auto& ch:dict[digits[idx]-'0']){
-            comb.push_back(ch);
-            combinations(digits,idx+1,comb,dict);
-            comb.pop_back();
+            generateCombs(digits,idx+1,temp+string(1,ch));
         }
     }
     vector<string> letterCombinations(string digits) {
-        vector<string> dict = {"","","abc","def","ghi","jkl","mno","pqrs",
-                          "tuv","wxyz"};
-        combinations(digits,0,"",dict);
+        generateCombs(digits,0,"");
         return res;
     }
 };
