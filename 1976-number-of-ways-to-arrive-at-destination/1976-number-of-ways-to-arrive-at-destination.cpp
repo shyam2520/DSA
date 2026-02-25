@@ -1,47 +1,51 @@
 class Solution {
 public:
-    using pii = pair<int,int>;
-    using pli = pair<long long,int>;
+    using pi = pair<int,int>;
+    int mod=1e9+7;
     int countPaths(int n, vector<vector<int>>& roads) {
-        // same as dijikstras 
-        // another cnt arr for ways wt to target < target dst -> replace 
-        // another cnt arr for ways wt to target == target cnt 
-        // another cnt arr for ways wt to target > skip 
-        vector<vector<pii>> adjMat(n); 
-        int u,v,wt,mod=1e9+7;
+       // 
+       // 0->10^3 
+       // V+E
+       // 1. adjList 
+       // 2. cost array for vertice
+       // 1. priority queue to keep track of lowest path {cost,node}
+       vector<vector<pi>> adjMat(n); // {node,cost}
+       vector<int> dist(n,INT_MAX),cnt(n,0);
         for(auto& road:roads){
-            u = road[0];
-            v = road[1];
-            wt = road[2]; 
-            adjMat[u].push_back({v,wt});// {node,wt}
-            adjMat[v].push_back({u,wt});
+            int u = road[0];
+            int v = road[1];
+            int time = road[2];
+            adjMat[u].push_back({v,time});
+            adjMat[v].push_back({u,time});
         }
-        priority_queue<pli,vector<pli>,greater<>> pq; //{cost,node} 
-        vector<long long> dist(n,LLONG_MAX);
-        vector<int> ways(n,0); 
-        pq.push({0,0});
+        priority_queue<pi,vector<pi>,greater<>> pq;
+        pq.push({0,0}); // {cost,node}
         dist[0]=0;
-        ways[0]=1;
+        cnt[0]=1;
+        int res = 0;
+
         while(pq.size()){
-            auto [cost,node]=pq.top();
-            pq.pop(); 
+            pi top = pq.top();
+            pq.pop();
+            auto [cost,node]=top;
             if(node==n-1){
-                return ways[n-1];
+                return cnt[n-1]%mod;
             }
-            if(cost>dist[node]) continue;
-            for(auto& neigh:adjMat[node]){
-                auto [nnode,ncost]=neigh;
-                long long newcost = (long long)cost+(long long)ncost;
-                if(newcost>dist[nnode]) continue; 
-                if(newcost==dist[nnode]){
-                    ways[nnode]=(ways[nnode] + ways[node])%mod;
+            for(auto& i:adjMat[node]){
+                // node,cost 
+                auto [v,time]=i;
+                if(cost+time==dist[v]){
+                    cnt[v]=((cnt[v]%mod)+(cnt[node]%mod))%mod;
                     continue;
                 }
-                ways[nnode]=ways[node];
-                dist[nnode]=newcost;
-                pq.push({newcost,nnode});
+                if(cost+time<dist[v]){
+                    pq.push({cost+time,v});
+                    dist[v]=cost+time;
+                    cnt[v]=cnt[node]%mod;
+                }
             }
         }
-        return -1;
+
+        return res;
     }
 };
