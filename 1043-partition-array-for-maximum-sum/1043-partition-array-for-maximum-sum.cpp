@@ -17,7 +17,20 @@ public:
 
     int maxSumAfterPartitioning(vector<int>& arr, int k) {
         int n = arr.size();
-        vector<int> dp(n,-1);
-        return genSubArr(arr,k,0,dp);
+        vector<int> dp(n,0);
+        for(int start=n-1;start>=0;start--){
+            int curr=0;
+            int res = 0;
+            for(int i=start;i<n && (i-start)<k;i++){
+                curr=max(curr,arr[i]);
+                res=max(
+                    res,
+                    curr*(i-start+1)+genSubArr(arr,k,i+1,dp)
+                    );
+            }
+            dp[start]=res;
+        }
+        return dp[0];
+        // return genSubArr(arr,k,0,dp);
     }
 };
