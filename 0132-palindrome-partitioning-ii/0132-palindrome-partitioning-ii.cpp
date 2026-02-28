@@ -1,31 +1,23 @@
 class Solution {
 public:
-    int checkPalindrome(string& s,int i,int j){
+    int checkPalindrome(string& s,int i,int j,vector<vector<int>>& dp){
+        if(dp[i][j]!=-1) return dp[i][j];
         while(i<j && s[i]==s[j]){
+            // dp[i][j]=1;
             i++;j--;
+            // if(dp[i][j]!=-1) return dp[i][j];
         }
-        return i>=j; // O(n)
+        return dp[i][j]=(i>=j); // O(n)
     }
-    int genCuts(string& s,int start,vector<int>& dp){
-        if(start==s.length()) return 0;
-        if(dp[start]!=-1) return dp[start];
-        int cuts = 2100; 
-        for(int i=start;i<s.length();i++){
-            // start -> i 
-            if(checkPalindrome(s,start,i)){
-                cuts = min(cuts,1+genCuts(s,i+1,dp));
-            }
-        }
-        return dp[start]=cuts;
-    }
-
     int minCut(string s) {
         // aab 
-        vector<int> dp(s.length()+1,0);
+        int n = s.length();
+        vector<int> dp(n+1,0);
+        vector<vector<int>> paldp(n,vector<int>(n,-1));
         for(int start=s.length()-1;start>=0;start--){
             int cuts = 2100;
             for(int i=start;i<s.length();i++){
-                if(checkPalindrome(s,start,i)){
+                if(checkPalindrome(s,start,i,paldp)){
                     cuts= min(cuts,1+dp[i+1]);
                 }
             }
