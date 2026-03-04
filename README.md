@@ -8,6 +8,7 @@ Leet Code Submissions
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [1277-count-square-submatrices-with-all-ones](https://github.com/shyam2520/DSA/tree/main/1277-count-square-submatrices-with-all-ones/) | Medium |
+| [1582-special-positions-in-a-binary-matrix](https://github.com/shyam2520/DSA/tree/main/1582-special-positions-in-a-binary-matrix/) | Easy |
 ## Dynamic Programming
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -17,6 +18,7 @@ Leet Code Submissions
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [1277-count-square-submatrices-with-all-ones](https://github.com/shyam2520/DSA/tree/main/1277-count-square-submatrices-with-all-ones/) | Medium |
+| [1582-special-positions-in-a-binary-matrix](https://github.com/shyam2520/DSA/tree/main/1582-special-positions-in-a-binary-matrix/) | Easy |
 ## Math
 | Problem Name | Difficulty |
 | ------- | ------- |
