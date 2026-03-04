@@ -7,6 +7,7 @@ Leet Code Submissions
 ## Array
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [0399-evaluate-division](https://github.com/shyam2520/DSA/tree/main/0399-evaluate-division/) | Medium |
 | [0931-minimum-falling-path-sum](https://github.com/shyam2520/DSA/tree/main/0931-minimum-falling-path-sum/) | Medium |
 | [1277-count-square-submatrices-with-all-ones](https://github.com/shyam2520/DSA/tree/main/1277-count-square-submatrices-with-all-ones/) | Medium |
 | [1582-special-positions-in-a-binary-matrix](https://github.com/shyam2520/DSA/tree/main/1582-special-positions-in-a-binary-matrix/) | Easy |
@@ -34,6 +35,7 @@ Leet Code Submissions
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0005-longest-palindromic-substring](https://github.com/shyam2520/DSA/tree/main/0005-longest-palindromic-substring/) | Medium |
+| [0399-evaluate-division](https://github.com/shyam2520/DSA/tree/main/0399-evaluate-division/) | Medium |
 | [1249-minimum-remove-to-make-valid-parentheses](https://github.com/shyam2520/DSA/tree/main/1249-minimum-remove-to-make-valid-parentheses/) | Medium |
 | [1545-find-kth-bit-in-nth-binary-string](https://github.com/shyam2520/DSA/tree/main/1545-find-kth-bit-in-nth-binary-string/) | Medium |
 ## Recursion
@@ -51,18 +53,22 @@ Leet Code Submissions
 ## Depth-First Search
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [0399-evaluate-division](https://github.com/shyam2520/DSA/tree/main/0399-evaluate-division/) | Medium |
 | [1361-validate-binary-tree-nodes](https://github.com/shyam2520/DSA/tree/main/1361-validate-binary-tree-nodes/) | Medium |
 ## Breadth-First Search
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [0399-evaluate-division](https://github.com/shyam2520/DSA/tree/main/0399-evaluate-division/) | Medium |
 | [1361-validate-binary-tree-nodes](https://github.com/shyam2520/DSA/tree/main/1361-validate-binary-tree-nodes/) | Medium |
 ## Union-Find
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [0399-evaluate-division](https://github.com/shyam2520/DSA/tree/main/0399-evaluate-division/) | Medium |
 | [1361-validate-binary-tree-nodes](https://github.com/shyam2520/DSA/tree/main/1361-validate-binary-tree-nodes/) | Medium |
 ## Graph Theory
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [0399-evaluate-division](https://github.com/shyam2520/DSA/tree/main/0399-evaluate-division/) | Medium |
 | [1361-validate-binary-tree-nodes](https://github.com/shyam2520/DSA/tree/main/1361-validate-binary-tree-nodes/) | Medium |
 ## Binary Tree
 | Problem Name | Difficulty |
@@ -76,4 +82,8 @@ Leet Code Submissions
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [1249-minimum-remove-to-make-valid-parentheses](https://github.com/shyam2520/DSA/tree/main/1249-minimum-remove-to-make-valid-parentheses/) | Medium |
+## Shortest Path
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [0399-evaluate-division](https://github.com/shyam2520/DSA/tree/main/0399-evaluate-division/) | Medium |
 <!---LeetCode Topics End-->
