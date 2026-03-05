@@ -5,7 +5,7 @@ function compose(functions: F[]): F {
     return function(x) {
         // console.log(x);
         // return 0;
-        let res:any=x;
+        let res:number=x;
         for(let i=functions.length-1;i>=0;i--){
             if(res){
                 res = functions[i](res);
