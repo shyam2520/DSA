@@ -11,6 +11,7 @@ Leet Code Submissions
 | [0931-minimum-falling-path-sum](https://github.com/shyam2520/DSA/tree/main/0931-minimum-falling-path-sum/) | Medium |
 | [1277-count-square-submatrices-with-all-ones](https://github.com/shyam2520/DSA/tree/main/1277-count-square-submatrices-with-all-ones/) | Medium |
 | [1582-special-positions-in-a-binary-matrix](https://github.com/shyam2520/DSA/tree/main/1582-special-positions-in-a-binary-matrix/) | Easy |
+| [3838-weighted-word-mapping](https://github.com/shyam2520/DSA/tree/main/3838-weighted-word-mapping/) | Easy |
 ## Dynamic Programming
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -43,6 +44,7 @@ Leet Code Submissions
 | [1545-find-kth-bit-in-nth-binary-string](https://github.com/shyam2520/DSA/tree/main/1545-find-kth-bit-in-nth-binary-string/) | Medium |
 | [1758-minimum-changes-to-make-alternating-binary-string](https://github.com/shyam2520/DSA/tree/main/1758-minimum-changes-to-make-alternating-binary-string/) | Easy |
 | [1784-check-if-binary-string-has-at-most-one-segment-of-ones](https://github.com/shyam2520/DSA/tree/main/1784-check-if-binary-string-has-at-most-one-segment-of-ones/) | Easy |
+| [3838-weighted-word-mapping](https://github.com/shyam2520/DSA/tree/main/3838-weighted-word-mapping/) | Easy |
 ## Recursion
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -52,6 +54,7 @@ Leet Code Submissions
 | ------- | ------- |
 | [0067-add-binary](https://github.com/shyam2520/DSA/tree/main/0067-add-binary/) | Easy |
 | [1545-find-kth-bit-in-nth-binary-string](https://github.com/shyam2520/DSA/tree/main/1545-find-kth-bit-in-nth-binary-string/) | Medium |
+| [3838-weighted-word-mapping](https://github.com/shyam2520/DSA/tree/main/3838-weighted-word-mapping/) | Easy |
 ## Tree
 | Problem Name | Difficulty |
 | ------- | ------- |
