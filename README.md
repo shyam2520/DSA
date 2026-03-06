@@ -36,6 +36,7 @@ Leet Code Submissions
 | ------- | ------- |
 | [0005-longest-palindromic-substring](https://github.com/shyam2520/DSA/tree/main/0005-longest-palindromic-substring/) | Medium |
 | [0399-evaluate-division](https://github.com/shyam2520/DSA/tree/main/0399-evaluate-division/) | Medium |
+| [0567-permutation-in-string](https://github.com/shyam2520/DSA/tree/main/0567-permutation-in-string/) | Medium |
 | [1249-minimum-remove-to-make-valid-parentheses](https://github.com/shyam2520/DSA/tree/main/1249-minimum-remove-to-make-valid-parentheses/) | Medium |
 | [1545-find-kth-bit-in-nth-binary-string](https://github.com/shyam2520/DSA/tree/main/1545-find-kth-bit-in-nth-binary-string/) | Medium |
 | [1758-minimum-changes-to-make-alternating-binary-string](https://github.com/shyam2520/DSA/tree/main/1758-minimum-changes-to-make-alternating-binary-string/) | Easy |
@@ -79,6 +80,7 @@ Leet Code Submissions
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0005-longest-palindromic-substring](https://github.com/shyam2520/DSA/tree/main/0005-longest-palindromic-substring/) | Medium |
+| [0567-permutation-in-string](https://github.com/shyam2520/DSA/tree/main/0567-permutation-in-string/) | Medium |
 ## Stack
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -87,4 +89,12 @@ Leet Code Submissions
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0399-evaluate-division](https://github.com/shyam2520/DSA/tree/main/0399-evaluate-division/) | Medium |
+## Hash Table
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [0567-permutation-in-string](https://github.com/shyam2520/DSA/tree/main/0567-permutation-in-string/) | Medium |
+## Sliding Window
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [0567-permutation-in-string](https://github.com/shyam2520/DSA/tree/main/0567-permutation-in-string/) | Medium |
 <!---LeetCode Topics End-->
