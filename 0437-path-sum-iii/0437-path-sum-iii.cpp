@@ -19,7 +19,7 @@ public:
         return res;
     }
 
-    void dfs(TreeNode* node,int & targetSum,long long  sum,unordered_map<long long ,int > dict){
+    void dfs(TreeNode* node,int & targetSum,long long  sum,unordered_map<long long,int>& dict){
         if(!node) return ;
         sum+=node->val;
         if(sum==targetSum) res++;
@@ -29,5 +29,7 @@ public:
         dict[sum]++;
         dfs(node->left,targetSum,sum,dict);
         dfs(node->right,targetSum,sum,dict);
+        dict[sum]--;
+        if(dict[sum]==0) dict.erase(sum);
     }
 };
