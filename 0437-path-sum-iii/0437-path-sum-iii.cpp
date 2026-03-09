@@ -30,6 +30,6 @@ public:
         dfs(node->left,targetSum,sum,dict);
         dfs(node->right,targetSum,sum,dict);
         dict[sum]--;
-        if(dict[sum]==0) dict.erase(sum);
+        // if(dict[sum]==0) dict.erase(sum);
     }
 };
