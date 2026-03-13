@@ -8,6 +8,7 @@ Leet Code Submissions
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0399-evaluate-division](https://github.com/shyam2520/DSA/tree/main/0399-evaluate-division/) | Medium |
+| [0421-maximum-xor-of-two-numbers-in-an-array](https://github.com/shyam2520/DSA/tree/main/0421-maximum-xor-of-two-numbers-in-an-array/) | Medium |
 | [0909-snakes-and-ladders](https://github.com/shyam2520/DSA/tree/main/0909-snakes-and-ladders/) | Medium |
 | [0931-minimum-falling-path-sum](https://github.com/shyam2520/DSA/tree/main/0931-minimum-falling-path-sum/) | Medium |
 | [1277-count-square-submatrices-with-all-ones](https://github.com/shyam2520/DSA/tree/main/1277-count-square-submatrices-with-all-ones/) | Medium |
@@ -110,6 +111,7 @@ Leet Code Submissions
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0208-implement-trie-prefix-tree](https://github.com/shyam2520/DSA/tree/main/0208-implement-trie-prefix-tree/) | Medium |
+| [0421-maximum-xor-of-two-numbers-in-an-array](https://github.com/shyam2520/DSA/tree/main/0421-maximum-xor-of-two-numbers-in-an-array/) | Medium |
 | [0567-permutation-in-string](https://github.com/shyam2520/DSA/tree/main/0567-permutation-in-string/) | Medium |
 | [2336-smallest-number-in-infinite-set](https://github.com/shyam2520/DSA/tree/main/2336-smallest-number-in-infinite-set/) | Medium |
 ## Sliding Window
@@ -120,6 +122,7 @@ Leet Code Submissions
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0067-add-binary](https://github.com/shyam2520/DSA/tree/main/0067-add-binary/) | Easy |
+| [0421-maximum-xor-of-two-numbers-in-an-array](https://github.com/shyam2520/DSA/tree/main/0421-maximum-xor-of-two-numbers-in-an-array/) | Medium |
 ## Design
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -129,6 +132,7 @@ Leet Code Submissions
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0208-implement-trie-prefix-tree](https://github.com/shyam2520/DSA/tree/main/0208-implement-trie-prefix-tree/) | Medium |
+| [0421-maximum-xor-of-two-numbers-in-an-array](https://github.com/shyam2520/DSA/tree/main/0421-maximum-xor-of-two-numbers-in-an-array/) | Medium |
 | [1858-longest-word-with-all-prefixes](https://github.com/shyam2520/DSA/tree/main/1858-longest-word-with-all-prefixes/) | Medium |
 ## Heap (Priority Queue)
 | Problem Name | Difficulty |
