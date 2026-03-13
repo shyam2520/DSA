@@ -16,9 +16,10 @@ public:
         // do dfs 
         // pass the dir as parameter 
         // return only lst or rst based on dir 
-        int l = preorder(root->left,'l');
-        int r = preorder(root->right,'r');
-        res=max({res,l,r});
+        // int l = preorder(root->left,'l');
+        // int r = preorder(root->right,'r');
+        // res=max({res,l,r});
+        preorder(root,'-');
         return res;
     }
     
