@@ -23,6 +23,7 @@ Leet Code Submissions
 | [0799-champagne-tower](https://github.com/shyam2520/DSA/tree/main/0799-champagne-tower/) | Medium |
 | [0931-minimum-falling-path-sum](https://github.com/shyam2520/DSA/tree/main/0931-minimum-falling-path-sum/) | Medium |
 | [1277-count-square-submatrices-with-all-ones](https://github.com/shyam2520/DSA/tree/main/1277-count-square-submatrices-with-all-ones/) | Medium |
+| [1372-longest-zigzag-path-in-a-binary-tree](https://github.com/shyam2520/DSA/tree/main/1372-longest-zigzag-path-in-a-binary-tree/) | Medium |
 ## Matrix
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -68,12 +69,14 @@ Leet Code Submissions
 | ------- | ------- |
 | [0437-path-sum-iii](https://github.com/shyam2520/DSA/tree/main/0437-path-sum-iii/) | Medium |
 | [1361-validate-binary-tree-nodes](https://github.com/shyam2520/DSA/tree/main/1361-validate-binary-tree-nodes/) | Medium |
+| [1372-longest-zigzag-path-in-a-binary-tree](https://github.com/shyam2520/DSA/tree/main/1372-longest-zigzag-path-in-a-binary-tree/) | Medium |
 ## Depth-First Search
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0399-evaluate-division](https://github.com/shyam2520/DSA/tree/main/0399-evaluate-division/) | Medium |
 | [0437-path-sum-iii](https://github.com/shyam2520/DSA/tree/main/0437-path-sum-iii/) | Medium |
 | [1361-validate-binary-tree-nodes](https://github.com/shyam2520/DSA/tree/main/1361-validate-binary-tree-nodes/) | Medium |
+| [1372-longest-zigzag-path-in-a-binary-tree](https://github.com/shyam2520/DSA/tree/main/1372-longest-zigzag-path-in-a-binary-tree/) | Medium |
 | [1858-longest-word-with-all-prefixes](https://github.com/shyam2520/DSA/tree/main/1858-longest-word-with-all-prefixes/) | Medium |
 ## Breadth-First Search
 | Problem Name | Difficulty |
@@ -96,6 +99,7 @@ Leet Code Submissions
 | ------- | ------- |
 | [0437-path-sum-iii](https://github.com/shyam2520/DSA/tree/main/0437-path-sum-iii/) | Medium |
 | [1361-validate-binary-tree-nodes](https://github.com/shyam2520/DSA/tree/main/1361-validate-binary-tree-nodes/) | Medium |
+| [1372-longest-zigzag-path-in-a-binary-tree](https://github.com/shyam2520/DSA/tree/main/1372-longest-zigzag-path-in-a-binary-tree/) | Medium |
 ## Two Pointers
 | Problem Name | Difficulty |
 | ------- | ------- |
