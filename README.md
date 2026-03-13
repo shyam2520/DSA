@@ -13,6 +13,7 @@ Leet Code Submissions
 | [0931-minimum-falling-path-sum](https://github.com/shyam2520/DSA/tree/main/0931-minimum-falling-path-sum/) | Medium |
 | [1277-count-square-submatrices-with-all-ones](https://github.com/shyam2520/DSA/tree/main/1277-count-square-submatrices-with-all-ones/) | Medium |
 | [1582-special-positions-in-a-binary-matrix](https://github.com/shyam2520/DSA/tree/main/1582-special-positions-in-a-binary-matrix/) | Easy |
+| [1707-maximum-xor-with-an-element-from-array](https://github.com/shyam2520/DSA/tree/main/1707-maximum-xor-with-an-element-from-array/) | Hard |
 | [1858-longest-word-with-all-prefixes](https://github.com/shyam2520/DSA/tree/main/1858-longest-word-with-all-prefixes/) | Medium |
 | [3838-weighted-word-mapping](https://github.com/shyam2520/DSA/tree/main/3838-weighted-word-mapping/) | Easy |
 ## Dynamic Programming
@@ -123,6 +124,7 @@ Leet Code Submissions
 | ------- | ------- |
 | [0067-add-binary](https://github.com/shyam2520/DSA/tree/main/0067-add-binary/) | Easy |
 | [0421-maximum-xor-of-two-numbers-in-an-array](https://github.com/shyam2520/DSA/tree/main/0421-maximum-xor-of-two-numbers-in-an-array/) | Medium |
+| [1707-maximum-xor-with-an-element-from-array](https://github.com/shyam2520/DSA/tree/main/1707-maximum-xor-with-an-element-from-array/) | Hard |
 ## Design
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -133,6 +135,7 @@ Leet Code Submissions
 | ------- | ------- |
 | [0208-implement-trie-prefix-tree](https://github.com/shyam2520/DSA/tree/main/0208-implement-trie-prefix-tree/) | Medium |
 | [0421-maximum-xor-of-two-numbers-in-an-array](https://github.com/shyam2520/DSA/tree/main/0421-maximum-xor-of-two-numbers-in-an-array/) | Medium |
+| [1707-maximum-xor-with-an-element-from-array](https://github.com/shyam2520/DSA/tree/main/1707-maximum-xor-with-an-element-from-array/) | Hard |
 | [1858-longest-word-with-all-prefixes](https://github.com/shyam2520/DSA/tree/main/1858-longest-word-with-all-prefixes/) | Medium |
 ## Heap (Priority Queue)
 | Problem Name | Difficulty |
