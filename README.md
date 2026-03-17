@@ -10,6 +10,7 @@ Leet Code Submissions
 | [0016-3sum-closest](https://github.com/shyam2520/DSA/tree/main/0016-3sum-closest/) | Medium |
 | [0399-evaluate-division](https://github.com/shyam2520/DSA/tree/main/0399-evaluate-division/) | Medium |
 | [0421-maximum-xor-of-two-numbers-in-an-array](https://github.com/shyam2520/DSA/tree/main/0421-maximum-xor-of-two-numbers-in-an-array/) | Medium |
+| [0540-single-element-in-a-sorted-array](https://github.com/shyam2520/DSA/tree/main/0540-single-element-in-a-sorted-array/) | Medium |
 | [0909-snakes-and-ladders](https://github.com/shyam2520/DSA/tree/main/0909-snakes-and-ladders/) | Medium |
 | [0931-minimum-falling-path-sum](https://github.com/shyam2520/DSA/tree/main/0931-minimum-falling-path-sum/) | Medium |
 | [1277-count-square-submatrices-with-all-ones](https://github.com/shyam2520/DSA/tree/main/1277-count-square-submatrices-with-all-ones/) | Medium |
@@ -166,4 +167,8 @@ Leet Code Submissions
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [2050-parallel-courses-iii](https://github.com/shyam2520/DSA/tree/main/2050-parallel-courses-iii/) | Hard |
+## Binary Search
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [0540-single-element-in-a-sorted-array](https://github.com/shyam2520/DSA/tree/main/0540-single-element-in-a-sorted-array/) | Medium |
 <!---LeetCode Topics End-->
