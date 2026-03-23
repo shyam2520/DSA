@@ -11,6 +11,7 @@ Leet Code Submissions
 | [0399-evaluate-division](https://github.com/shyam2520/DSA/tree/main/0399-evaluate-division/) | Medium |
 | [0421-maximum-xor-of-two-numbers-in-an-array](https://github.com/shyam2520/DSA/tree/main/0421-maximum-xor-of-two-numbers-in-an-array/) | Medium |
 | [0540-single-element-in-a-sorted-array](https://github.com/shyam2520/DSA/tree/main/0540-single-element-in-a-sorted-array/) | Medium |
+| [0907-sum-of-subarray-minimums](https://github.com/shyam2520/DSA/tree/main/0907-sum-of-subarray-minimums/) | Medium |
 | [0909-snakes-and-ladders](https://github.com/shyam2520/DSA/tree/main/0909-snakes-and-ladders/) | Medium |
 | [0931-minimum-falling-path-sum](https://github.com/shyam2520/DSA/tree/main/0931-minimum-falling-path-sum/) | Medium |
 | [1277-count-square-submatrices-with-all-ones](https://github.com/shyam2520/DSA/tree/main/1277-count-square-submatrices-with-all-ones/) | Medium |
@@ -24,6 +25,7 @@ Leet Code Submissions
 | ------- | ------- |
 | [0005-longest-palindromic-substring](https://github.com/shyam2520/DSA/tree/main/0005-longest-palindromic-substring/) | Medium |
 | [0799-champagne-tower](https://github.com/shyam2520/DSA/tree/main/0799-champagne-tower/) | Medium |
+| [0907-sum-of-subarray-minimums](https://github.com/shyam2520/DSA/tree/main/0907-sum-of-subarray-minimums/) | Medium |
 | [0931-minimum-falling-path-sum](https://github.com/shyam2520/DSA/tree/main/0931-minimum-falling-path-sum/) | Medium |
 | [1277-count-square-submatrices-with-all-ones](https://github.com/shyam2520/DSA/tree/main/1277-count-square-submatrices-with-all-ones/) | Medium |
 | [1372-longest-zigzag-path-in-a-binary-tree](https://github.com/shyam2520/DSA/tree/main/1372-longest-zigzag-path-in-a-binary-tree/) | Medium |
@@ -120,6 +122,7 @@ Leet Code Submissions
 ## Stack
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [0907-sum-of-subarray-minimums](https://github.com/shyam2520/DSA/tree/main/0907-sum-of-subarray-minimums/) | Medium |
 | [1249-minimum-remove-to-make-valid-parentheses](https://github.com/shyam2520/DSA/tree/main/1249-minimum-remove-to-make-valid-parentheses/) | Medium |
 ## Shortest Path
 | Problem Name | Difficulty |
@@ -193,4 +196,8 @@ Leet Code Submissions
 | [1661-average-time-of-process-per-machine](https://github.com/shyam2520/DSA/tree/main/1661-average-time-of-process-per-machine/) | Easy |
 | [1683-invalid-tweets](https://github.com/shyam2520/DSA/tree/main/1683-invalid-tweets/) | Easy |
 | [1757-recyclable-and-low-fat-products](https://github.com/shyam2520/DSA/tree/main/1757-recyclable-and-low-fat-products/) | Easy |
+## Monotonic Stack
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [0907-sum-of-subarray-minimums](https://github.com/shyam2520/DSA/tree/main/0907-sum-of-subarray-minimums/) | Medium |
 <!---LeetCode Topics End-->
