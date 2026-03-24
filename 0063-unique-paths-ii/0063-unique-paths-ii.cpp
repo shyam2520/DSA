@@ -1,27 +1,16 @@
 class Solution {
 public:
-    int mod = 2*1e9;
     int uniquePathsWithObstacles(vector<vector<int>>& grid) {
-        // dfs + dp 
-        int m=grid.size(),n=grid[0].size(); 
-        // vector<vector<int>> dp(m,vector<int>(n,0));
-        vector<int> next(n);
-        vector<int> curr(n);
-        for(int i=m-1;i>=0;i--){
-            for(int j=n-1;j>=0;j--){
-                if(grid[i][j]==1) {
-                    curr[j]=0;
-                }
-                else if(i==m-1 && j==n-1) curr[j]=1;
-                else{
-                    curr[j]=(long)(i+1<m?next[j]:0)+(long)(j+1<n?curr[j+1]:0);
-                }
-            }
-            next=curr;
-
-        }
-        return next[0];
-
-        // return paths(grid,0,0,dp);
+        vector<vector<int>> dp(grid.size(),vector<int>(grid[0].size(),-1));
+        return dfs(grid,0,0,dp);
     }
+
+    int dfs(vector<vector<int>>& grid,int x,int y,vector<vector<int>>& dp){
+        if(x==grid.size() || y==grid[0].size() || grid[x][y]==1) return 0;
+        if(x==grid.size()-1 && y==grid[0].size()-1) return 1;
+        if(dp[x][y]!=-1) return dp[x][y]; 
+        // if()
+        return dp[x][y]=dfs(grid,x+1,y,dp)+dfs(grid,x,y+1,dp);
+    }
+
 };
