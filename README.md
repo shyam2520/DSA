@@ -19,6 +19,7 @@ Leet Code Submissions
 | [1707-maximum-xor-with-an-element-from-array](https://github.com/shyam2520/DSA/tree/main/1707-maximum-xor-with-an-element-from-array/) | Hard |
 | [1858-longest-word-with-all-prefixes](https://github.com/shyam2520/DSA/tree/main/1858-longest-word-with-all-prefixes/) | Medium |
 | [2050-parallel-courses-iii](https://github.com/shyam2520/DSA/tree/main/2050-parallel-courses-iii/) | Hard |
+| [2104-sum-of-subarray-ranges](https://github.com/shyam2520/DSA/tree/main/2104-sum-of-subarray-ranges/) | Medium |
 | [3838-weighted-word-mapping](https://github.com/shyam2520/DSA/tree/main/3838-weighted-word-mapping/) | Easy |
 ## Dynamic Programming
 | Problem Name | Difficulty |
@@ -124,6 +125,7 @@ Leet Code Submissions
 | ------- | ------- |
 | [0907-sum-of-subarray-minimums](https://github.com/shyam2520/DSA/tree/main/0907-sum-of-subarray-minimums/) | Medium |
 | [1249-minimum-remove-to-make-valid-parentheses](https://github.com/shyam2520/DSA/tree/main/1249-minimum-remove-to-make-valid-parentheses/) | Medium |
+| [2104-sum-of-subarray-ranges](https://github.com/shyam2520/DSA/tree/main/2104-sum-of-subarray-ranges/) | Medium |
 ## Shortest Path
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -200,4 +202,5 @@ Leet Code Submissions
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0907-sum-of-subarray-minimums](https://github.com/shyam2520/DSA/tree/main/0907-sum-of-subarray-minimums/) | Medium |
+| [2104-sum-of-subarray-ranges](https://github.com/shyam2520/DSA/tree/main/2104-sum-of-subarray-ranges/) | Medium |
 <!---LeetCode Topics End-->
