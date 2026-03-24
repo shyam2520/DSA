@@ -9,6 +9,7 @@ Leet Code Submissions
 | ------- | ------- |
 | [0016-3sum-closest](https://github.com/shyam2520/DSA/tree/main/0016-3sum-closest/) | Medium |
 | [0399-evaluate-division](https://github.com/shyam2520/DSA/tree/main/0399-evaluate-division/) | Medium |
+| [0410-split-array-largest-sum](https://github.com/shyam2520/DSA/tree/main/0410-split-array-largest-sum/) | Hard |
 | [0421-maximum-xor-of-two-numbers-in-an-array](https://github.com/shyam2520/DSA/tree/main/0421-maximum-xor-of-two-numbers-in-an-array/) | Medium |
 | [0540-single-element-in-a-sorted-array](https://github.com/shyam2520/DSA/tree/main/0540-single-element-in-a-sorted-array/) | Medium |
 | [0907-sum-of-subarray-minimums](https://github.com/shyam2520/DSA/tree/main/0907-sum-of-subarray-minimums/) | Medium |
@@ -25,6 +26,7 @@ Leet Code Submissions
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0005-longest-palindromic-substring](https://github.com/shyam2520/DSA/tree/main/0005-longest-palindromic-substring/) | Medium |
+| [0410-split-array-largest-sum](https://github.com/shyam2520/DSA/tree/main/0410-split-array-largest-sum/) | Hard |
 | [0799-champagne-tower](https://github.com/shyam2520/DSA/tree/main/0799-champagne-tower/) | Medium |
 | [0907-sum-of-subarray-minimums](https://github.com/shyam2520/DSA/tree/main/0907-sum-of-subarray-minimums/) | Medium |
 | [0931-minimum-falling-path-sum](https://github.com/shyam2520/DSA/tree/main/0931-minimum-falling-path-sum/) | Medium |
@@ -178,6 +180,7 @@ Leet Code Submissions
 ## Binary Search
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [0410-split-array-largest-sum](https://github.com/shyam2520/DSA/tree/main/0410-split-array-largest-sum/) | Hard |
 | [0540-single-element-in-a-sorted-array](https://github.com/shyam2520/DSA/tree/main/0540-single-element-in-a-sorted-array/) | Medium |
 ## Database
 | Problem Name | Difficulty |
@@ -203,4 +206,12 @@ Leet Code Submissions
 | ------- | ------- |
 | [0907-sum-of-subarray-minimums](https://github.com/shyam2520/DSA/tree/main/0907-sum-of-subarray-minimums/) | Medium |
 | [2104-sum-of-subarray-ranges](https://github.com/shyam2520/DSA/tree/main/2104-sum-of-subarray-ranges/) | Medium |
+## Greedy
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [0410-split-array-largest-sum](https://github.com/shyam2520/DSA/tree/main/0410-split-array-largest-sum/) | Hard |
+## Prefix Sum
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [0410-split-array-largest-sum](https://github.com/shyam2520/DSA/tree/main/0410-split-array-largest-sum/) | Hard |
 <!---LeetCode Topics End-->
