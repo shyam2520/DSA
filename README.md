@@ -115,6 +115,7 @@ Leet Code Submissions
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0399-evaluate-division](https://github.com/shyam2520/DSA/tree/main/0399-evaluate-division/) | Medium |
+| [1136-parallel-courses](https://github.com/shyam2520/DSA/tree/main/1136-parallel-courses/) | Medium |
 | [1361-validate-binary-tree-nodes](https://github.com/shyam2520/DSA/tree/main/1361-validate-binary-tree-nodes/) | Medium |
 | [1466-reorder-routes-to-make-all-paths-lead-to-the-city-zero](https://github.com/shyam2520/DSA/tree/main/1466-reorder-routes-to-make-all-paths-lead-to-the-city-zero/) | Medium |
 | [2050-parallel-courses-iii](https://github.com/shyam2520/DSA/tree/main/2050-parallel-courses-iii/) | Hard |
@@ -188,6 +189,7 @@ Leet Code Submissions
 ## Topological Sort
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [1136-parallel-courses](https://github.com/shyam2520/DSA/tree/main/1136-parallel-courses/) | Medium |
 | [2050-parallel-courses-iii](https://github.com/shyam2520/DSA/tree/main/2050-parallel-courses-iii/) | Hard |
 ## Binary Search
 | Problem Name | Difficulty |
