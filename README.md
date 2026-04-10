@@ -91,6 +91,7 @@ Leet Code Submissions
 ## Depth-First Search
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [0207-course-schedule](https://github.com/shyam2520/DSA/tree/main/0207-course-schedule/) | Medium |
 | [0399-evaluate-division](https://github.com/shyam2520/DSA/tree/main/0399-evaluate-division/) | Medium |
 | [0437-path-sum-iii](https://github.com/shyam2520/DSA/tree/main/0437-path-sum-iii/) | Medium |
 | [1361-validate-binary-tree-nodes](https://github.com/shyam2520/DSA/tree/main/1361-validate-binary-tree-nodes/) | Medium |
@@ -101,6 +102,7 @@ Leet Code Submissions
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0102-binary-tree-level-order-traversal](https://github.com/shyam2520/DSA/tree/main/0102-binary-tree-level-order-traversal/) | Medium |
+| [0207-course-schedule](https://github.com/shyam2520/DSA/tree/main/0207-course-schedule/) | Medium |
 | [0279-perfect-squares](https://github.com/shyam2520/DSA/tree/main/0279-perfect-squares/) | Medium |
 | [0399-evaluate-division](https://github.com/shyam2520/DSA/tree/main/0399-evaluate-division/) | Medium |
 | [0909-snakes-and-ladders](https://github.com/shyam2520/DSA/tree/main/0909-snakes-and-ladders/) | Medium |
@@ -114,6 +116,7 @@ Leet Code Submissions
 ## Graph Theory
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [0207-course-schedule](https://github.com/shyam2520/DSA/tree/main/0207-course-schedule/) | Medium |
 | [0399-evaluate-division](https://github.com/shyam2520/DSA/tree/main/0399-evaluate-division/) | Medium |
 | [1136-parallel-courses](https://github.com/shyam2520/DSA/tree/main/1136-parallel-courses/) | Medium |
 | [1361-validate-binary-tree-nodes](https://github.com/shyam2520/DSA/tree/main/1361-validate-binary-tree-nodes/) | Medium |
@@ -189,6 +192,7 @@ Leet Code Submissions
 ## Topological Sort
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [0207-course-schedule](https://github.com/shyam2520/DSA/tree/main/0207-course-schedule/) | Medium |
 | [1136-parallel-courses](https://github.com/shyam2520/DSA/tree/main/1136-parallel-courses/) | Medium |
 | [2050-parallel-courses-iii](https://github.com/shyam2520/DSA/tree/main/2050-parallel-courses-iii/) | Hard |
 ## Binary Search
