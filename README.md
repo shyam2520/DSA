@@ -23,6 +23,7 @@ Leet Code Submissions
 | [1858-longest-word-with-all-prefixes](https://github.com/shyam2520/DSA/tree/main/1858-longest-word-with-all-prefixes/) | Medium |
 | [2050-parallel-courses-iii](https://github.com/shyam2520/DSA/tree/main/2050-parallel-courses-iii/) | Hard |
 | [2104-sum-of-subarray-ranges](https://github.com/shyam2520/DSA/tree/main/2104-sum-of-subarray-ranges/) | Medium |
+| [3286-find-a-safe-walk-through-a-grid](https://github.com/shyam2520/DSA/tree/main/3286-find-a-safe-walk-through-a-grid/) | Medium |
 | [3838-weighted-word-mapping](https://github.com/shyam2520/DSA/tree/main/3838-weighted-word-mapping/) | Easy |
 ## Dynamic Programming
 | Problem Name | Difficulty |
@@ -46,6 +47,7 @@ Leet Code Submissions
 | [0931-minimum-falling-path-sum](https://github.com/shyam2520/DSA/tree/main/0931-minimum-falling-path-sum/) | Medium |
 | [1277-count-square-submatrices-with-all-ones](https://github.com/shyam2520/DSA/tree/main/1277-count-square-submatrices-with-all-ones/) | Medium |
 | [1582-special-positions-in-a-binary-matrix](https://github.com/shyam2520/DSA/tree/main/1582-special-positions-in-a-binary-matrix/) | Easy |
+| [3286-find-a-safe-walk-through-a-grid](https://github.com/shyam2520/DSA/tree/main/3286-find-a-safe-walk-through-a-grid/) | Medium |
 ## Math
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -108,6 +110,7 @@ Leet Code Submissions
 | [0909-snakes-and-ladders](https://github.com/shyam2520/DSA/tree/main/0909-snakes-and-ladders/) | Medium |
 | [1361-validate-binary-tree-nodes](https://github.com/shyam2520/DSA/tree/main/1361-validate-binary-tree-nodes/) | Medium |
 | [1466-reorder-routes-to-make-all-paths-lead-to-the-city-zero](https://github.com/shyam2520/DSA/tree/main/1466-reorder-routes-to-make-all-paths-lead-to-the-city-zero/) | Medium |
+| [3286-find-a-safe-walk-through-a-grid](https://github.com/shyam2520/DSA/tree/main/3286-find-a-safe-walk-through-a-grid/) | Medium |
 ## Union-Find
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -122,6 +125,7 @@ Leet Code Submissions
 | [1361-validate-binary-tree-nodes](https://github.com/shyam2520/DSA/tree/main/1361-validate-binary-tree-nodes/) | Medium |
 | [1466-reorder-routes-to-make-all-paths-lead-to-the-city-zero](https://github.com/shyam2520/DSA/tree/main/1466-reorder-routes-to-make-all-paths-lead-to-the-city-zero/) | Medium |
 | [2050-parallel-courses-iii](https://github.com/shyam2520/DSA/tree/main/2050-parallel-courses-iii/) | Hard |
+| [3286-find-a-safe-walk-through-a-grid](https://github.com/shyam2520/DSA/tree/main/3286-find-a-safe-walk-through-a-grid/) | Medium |
 ## Binary Tree
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -146,6 +150,7 @@ Leet Code Submissions
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0399-evaluate-division](https://github.com/shyam2520/DSA/tree/main/0399-evaluate-division/) | Medium |
+| [3286-find-a-safe-walk-through-a-grid](https://github.com/shyam2520/DSA/tree/main/3286-find-a-safe-walk-through-a-grid/) | Medium |
 ## Hash Table
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -180,6 +185,7 @@ Leet Code Submissions
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [2336-smallest-number-in-infinite-set](https://github.com/shyam2520/DSA/tree/main/2336-smallest-number-in-infinite-set/) | Medium |
+| [3286-find-a-safe-walk-through-a-grid](https://github.com/shyam2520/DSA/tree/main/3286-find-a-safe-walk-through-a-grid/) | Medium |
 ## Ordered Set
 | Problem Name | Difficulty |
 | ------- | ------- |
