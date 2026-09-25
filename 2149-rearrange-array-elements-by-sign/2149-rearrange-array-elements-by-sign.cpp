@@ -8,9 +8,9 @@ public:
         vector<int> res;
         while(i<n && j<n){
             while(i<n && nums[i]<0) i++;
-            if(i<n) res.push_back(nums[i++]);
+            res.push_back(nums[i++]);
             while(j<n && nums[j]>=0) j++;
-            if(j<n) res.push_back(nums[j++]);
+            res.push_back(nums[j++]);
         }
 
         while(i<n && nums[i]>=0) res.push_back(nums[i++]);
