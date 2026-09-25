@@ -12,6 +12,7 @@ Leet Code Submissions
 | [0169-majority-element](https://github.com/shyam2520/DSA/tree/main/0169-majority-element/) | Easy |
 | [0189-rotate-array](https://github.com/shyam2520/DSA/tree/main/0189-rotate-array/) | Medium |
 | [0221-maximal-square](https://github.com/shyam2520/DSA/tree/main/0221-maximal-square/) | Medium |
+| [0268-missing-number](https://github.com/shyam2520/DSA/tree/main/0268-missing-number/) | Easy |
 | [0399-evaluate-division](https://github.com/shyam2520/DSA/tree/main/0399-evaluate-division/) | Medium |
 | [0410-split-array-largest-sum](https://github.com/shyam2520/DSA/tree/main/0410-split-array-largest-sum/) | Hard |
 | [0421-maximum-xor-of-two-numbers-in-an-array](https://github.com/shyam2520/DSA/tree/main/0421-maximum-xor-of-two-numbers-in-an-array/) | Medium |
@@ -56,6 +57,7 @@ Leet Code Submissions
 | ------- | ------- |
 | [0067-add-binary](https://github.com/shyam2520/DSA/tree/main/0067-add-binary/) | Easy |
 | [0189-rotate-array](https://github.com/shyam2520/DSA/tree/main/0189-rotate-array/) | Medium |
+| [0268-missing-number](https://github.com/shyam2520/DSA/tree/main/0268-missing-number/) | Easy |
 | [0279-perfect-squares](https://github.com/shyam2520/DSA/tree/main/0279-perfect-squares/) | Medium |
 | [3848-check-digitorial-permutation](https://github.com/shyam2520/DSA/tree/main/3848-check-digitorial-permutation/) | Medium |
 ## Counting
@@ -162,6 +164,7 @@ Leet Code Submissions
 | ------- | ------- |
 | [0169-majority-element](https://github.com/shyam2520/DSA/tree/main/0169-majority-element/) | Easy |
 | [0208-implement-trie-prefix-tree](https://github.com/shyam2520/DSA/tree/main/0208-implement-trie-prefix-tree/) | Medium |
+| [0268-missing-number](https://github.com/shyam2520/DSA/tree/main/0268-missing-number/) | Easy |
 | [0421-maximum-xor-of-two-numbers-in-an-array](https://github.com/shyam2520/DSA/tree/main/0421-maximum-xor-of-two-numbers-in-an-array/) | Medium |
 | [0567-permutation-in-string](https://github.com/shyam2520/DSA/tree/main/0567-permutation-in-string/) | Medium |
 | [1048-longest-string-chain](https://github.com/shyam2520/DSA/tree/main/1048-longest-string-chain/) | Medium |
@@ -174,6 +177,7 @@ Leet Code Submissions
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0067-add-binary](https://github.com/shyam2520/DSA/tree/main/0067-add-binary/) | Easy |
+| [0268-missing-number](https://github.com/shyam2520/DSA/tree/main/0268-missing-number/) | Easy |
 | [0421-maximum-xor-of-two-numbers-in-an-array](https://github.com/shyam2520/DSA/tree/main/0421-maximum-xor-of-two-numbers-in-an-array/) | Medium |
 | [1707-maximum-xor-with-an-element-from-array](https://github.com/shyam2520/DSA/tree/main/1707-maximum-xor-with-an-element-from-array/) | Hard |
 ## Design
@@ -203,6 +207,7 @@ Leet Code Submissions
 | [0016-3sum-closest](https://github.com/shyam2520/DSA/tree/main/0016-3sum-closest/) | Medium |
 | [0056-merge-intervals](https://github.com/shyam2520/DSA/tree/main/0056-merge-intervals/) | Medium |
 | [0169-majority-element](https://github.com/shyam2520/DSA/tree/main/0169-majority-element/) | Easy |
+| [0268-missing-number](https://github.com/shyam2520/DSA/tree/main/0268-missing-number/) | Easy |
 | [1048-longest-string-chain](https://github.com/shyam2520/DSA/tree/main/1048-longest-string-chain/) | Medium |
 ## Topological Sort
 | Problem Name | Difficulty |
@@ -213,6 +218,7 @@ Leet Code Submissions
 ## Binary Search
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [0268-missing-number](https://github.com/shyam2520/DSA/tree/main/0268-missing-number/) | Easy |
 | [0410-split-array-largest-sum](https://github.com/shyam2520/DSA/tree/main/0410-split-array-largest-sum/) | Hard |
 | [0540-single-element-in-a-sorted-array](https://github.com/shyam2520/DSA/tree/main/0540-single-element-in-a-sorted-array/) | Medium |
 ## Database
