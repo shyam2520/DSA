@@ -24,6 +24,7 @@ Leet Code Submissions
 | [1277-count-square-submatrices-with-all-ones](https://github.com/shyam2520/DSA/tree/main/1277-count-square-submatrices-with-all-ones/) | Medium |
 | [1582-special-positions-in-a-binary-matrix](https://github.com/shyam2520/DSA/tree/main/1582-special-positions-in-a-binary-matrix/) | Easy |
 | [1707-maximum-xor-with-an-element-from-array](https://github.com/shyam2520/DSA/tree/main/1707-maximum-xor-with-an-element-from-array/) | Hard |
+| [1762-buildings-with-an-ocean-view](https://github.com/shyam2520/DSA/tree/main/1762-buildings-with-an-ocean-view/) | Medium |
 | [1858-longest-word-with-all-prefixes](https://github.com/shyam2520/DSA/tree/main/1858-longest-word-with-all-prefixes/) | Medium |
 | [2050-parallel-courses-iii](https://github.com/shyam2520/DSA/tree/main/2050-parallel-courses-iii/) | Hard |
 | [2104-sum-of-subarray-ranges](https://github.com/shyam2520/DSA/tree/main/2104-sum-of-subarray-ranges/) | Medium |
@@ -153,6 +154,7 @@ Leet Code Submissions
 | ------- | ------- |
 | [0907-sum-of-subarray-minimums](https://github.com/shyam2520/DSA/tree/main/0907-sum-of-subarray-minimums/) | Medium |
 | [1249-minimum-remove-to-make-valid-parentheses](https://github.com/shyam2520/DSA/tree/main/1249-minimum-remove-to-make-valid-parentheses/) | Medium |
+| [1762-buildings-with-an-ocean-view](https://github.com/shyam2520/DSA/tree/main/1762-buildings-with-an-ocean-view/) | Medium |
 | [2104-sum-of-subarray-ranges](https://github.com/shyam2520/DSA/tree/main/2104-sum-of-subarray-ranges/) | Medium |
 ## Shortest Path
 | Problem Name | Difficulty |
@@ -244,6 +246,7 @@ Leet Code Submissions
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0907-sum-of-subarray-minimums](https://github.com/shyam2520/DSA/tree/main/0907-sum-of-subarray-minimums/) | Medium |
+| [1762-buildings-with-an-ocean-view](https://github.com/shyam2520/DSA/tree/main/1762-buildings-with-an-ocean-view/) | Medium |
 | [2104-sum-of-subarray-ranges](https://github.com/shyam2520/DSA/tree/main/2104-sum-of-subarray-ranges/) | Medium |
 ## Greedy
 | Problem Name | Difficulty |
