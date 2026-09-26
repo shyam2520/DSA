@@ -106,6 +106,7 @@ Leet Code Submissions
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0102-binary-tree-level-order-traversal](https://github.com/shyam2520/DSA/tree/main/0102-binary-tree-level-order-traversal/) | Medium |
+| [0226-invert-binary-tree](https://github.com/shyam2520/DSA/tree/main/0226-invert-binary-tree/) | Easy |
 | [0437-path-sum-iii](https://github.com/shyam2520/DSA/tree/main/0437-path-sum-iii/) | Medium |
 | [1361-validate-binary-tree-nodes](https://github.com/shyam2520/DSA/tree/main/1361-validate-binary-tree-nodes/) | Medium |
 | [1372-longest-zigzag-path-in-a-binary-tree](https://github.com/shyam2520/DSA/tree/main/1372-longest-zigzag-path-in-a-binary-tree/) | Medium |
@@ -113,6 +114,7 @@ Leet Code Submissions
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0207-course-schedule](https://github.com/shyam2520/DSA/tree/main/0207-course-schedule/) | Medium |
+| [0226-invert-binary-tree](https://github.com/shyam2520/DSA/tree/main/0226-invert-binary-tree/) | Easy |
 | [0399-evaluate-division](https://github.com/shyam2520/DSA/tree/main/0399-evaluate-division/) | Medium |
 | [0437-path-sum-iii](https://github.com/shyam2520/DSA/tree/main/0437-path-sum-iii/) | Medium |
 | [1361-validate-binary-tree-nodes](https://github.com/shyam2520/DSA/tree/main/1361-validate-binary-tree-nodes/) | Medium |
@@ -124,6 +126,7 @@ Leet Code Submissions
 | ------- | ------- |
 | [0102-binary-tree-level-order-traversal](https://github.com/shyam2520/DSA/tree/main/0102-binary-tree-level-order-traversal/) | Medium |
 | [0207-course-schedule](https://github.com/shyam2520/DSA/tree/main/0207-course-schedule/) | Medium |
+| [0226-invert-binary-tree](https://github.com/shyam2520/DSA/tree/main/0226-invert-binary-tree/) | Easy |
 | [0279-perfect-squares](https://github.com/shyam2520/DSA/tree/main/0279-perfect-squares/) | Medium |
 | [0399-evaluate-division](https://github.com/shyam2520/DSA/tree/main/0399-evaluate-division/) | Medium |
 | [0909-snakes-and-ladders](https://github.com/shyam2520/DSA/tree/main/0909-snakes-and-ladders/) | Medium |
@@ -149,6 +152,7 @@ Leet Code Submissions
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0102-binary-tree-level-order-traversal](https://github.com/shyam2520/DSA/tree/main/0102-binary-tree-level-order-traversal/) | Medium |
+| [0226-invert-binary-tree](https://github.com/shyam2520/DSA/tree/main/0226-invert-binary-tree/) | Easy |
 | [0437-path-sum-iii](https://github.com/shyam2520/DSA/tree/main/0437-path-sum-iii/) | Medium |
 | [1361-validate-binary-tree-nodes](https://github.com/shyam2520/DSA/tree/main/1361-validate-binary-tree-nodes/) | Medium |
 | [1372-longest-zigzag-path-in-a-binary-tree](https://github.com/shyam2520/DSA/tree/main/1372-longest-zigzag-path-in-a-binary-tree/) | Medium |
