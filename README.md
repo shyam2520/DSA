@@ -108,6 +108,7 @@ Leet Code Submissions
 | [0102-binary-tree-level-order-traversal](https://github.com/shyam2520/DSA/tree/main/0102-binary-tree-level-order-traversal/) | Medium |
 | [0226-invert-binary-tree](https://github.com/shyam2520/DSA/tree/main/0226-invert-binary-tree/) | Easy |
 | [0437-path-sum-iii](https://github.com/shyam2520/DSA/tree/main/0437-path-sum-iii/) | Medium |
+| [0572-subtree-of-another-tree](https://github.com/shyam2520/DSA/tree/main/0572-subtree-of-another-tree/) | Easy |
 | [1361-validate-binary-tree-nodes](https://github.com/shyam2520/DSA/tree/main/1361-validate-binary-tree-nodes/) | Medium |
 | [1372-longest-zigzag-path-in-a-binary-tree](https://github.com/shyam2520/DSA/tree/main/1372-longest-zigzag-path-in-a-binary-tree/) | Medium |
 ## Depth-First Search
@@ -117,6 +118,7 @@ Leet Code Submissions
 | [0226-invert-binary-tree](https://github.com/shyam2520/DSA/tree/main/0226-invert-binary-tree/) | Easy |
 | [0399-evaluate-division](https://github.com/shyam2520/DSA/tree/main/0399-evaluate-division/) | Medium |
 | [0437-path-sum-iii](https://github.com/shyam2520/DSA/tree/main/0437-path-sum-iii/) | Medium |
+| [0572-subtree-of-another-tree](https://github.com/shyam2520/DSA/tree/main/0572-subtree-of-another-tree/) | Easy |
 | [1361-validate-binary-tree-nodes](https://github.com/shyam2520/DSA/tree/main/1361-validate-binary-tree-nodes/) | Medium |
 | [1372-longest-zigzag-path-in-a-binary-tree](https://github.com/shyam2520/DSA/tree/main/1372-longest-zigzag-path-in-a-binary-tree/) | Medium |
 | [1466-reorder-routes-to-make-all-paths-lead-to-the-city-zero](https://github.com/shyam2520/DSA/tree/main/1466-reorder-routes-to-make-all-paths-lead-to-the-city-zero/) | Medium |
@@ -154,6 +156,7 @@ Leet Code Submissions
 | [0102-binary-tree-level-order-traversal](https://github.com/shyam2520/DSA/tree/main/0102-binary-tree-level-order-traversal/) | Medium |
 | [0226-invert-binary-tree](https://github.com/shyam2520/DSA/tree/main/0226-invert-binary-tree/) | Easy |
 | [0437-path-sum-iii](https://github.com/shyam2520/DSA/tree/main/0437-path-sum-iii/) | Medium |
+| [0572-subtree-of-another-tree](https://github.com/shyam2520/DSA/tree/main/0572-subtree-of-another-tree/) | Easy |
 | [1361-validate-binary-tree-nodes](https://github.com/shyam2520/DSA/tree/main/1361-validate-binary-tree-nodes/) | Medium |
 | [1372-longest-zigzag-path-in-a-binary-tree](https://github.com/shyam2520/DSA/tree/main/1372-longest-zigzag-path-in-a-binary-tree/) | Medium |
 ## Two Pointers
@@ -288,4 +291,12 @@ Leet Code Submissions
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0021-merge-two-sorted-lists](https://github.com/shyam2520/DSA/tree/main/0021-merge-two-sorted-lists/) | Easy |
+## String Matching
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [0572-subtree-of-another-tree](https://github.com/shyam2520/DSA/tree/main/0572-subtree-of-another-tree/) | Easy |
+## Hash Function
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [0572-subtree-of-another-tree](https://github.com/shyam2520/DSA/tree/main/0572-subtree-of-another-tree/) | Easy |
 <!---LeetCode Topics End-->
