@@ -10,6 +10,7 @@ Leet Code Submissions
 | [0016-3sum-closest](https://github.com/shyam2520/DSA/tree/main/0016-3sum-closest/) | Medium |
 | [0054-spiral-matrix](https://github.com/shyam2520/DSA/tree/main/0054-spiral-matrix/) | Medium |
 | [0056-merge-intervals](https://github.com/shyam2520/DSA/tree/main/0056-merge-intervals/) | Medium |
+| [0118-pascals-triangle](https://github.com/shyam2520/DSA/tree/main/0118-pascals-triangle/) | Easy |
 | [0169-majority-element](https://github.com/shyam2520/DSA/tree/main/0169-majority-element/) | Easy |
 | [0189-rotate-array](https://github.com/shyam2520/DSA/tree/main/0189-rotate-array/) | Medium |
 | [0221-maximal-square](https://github.com/shyam2520/DSA/tree/main/0221-maximal-square/) | Medium |
@@ -36,6 +37,7 @@ Leet Code Submissions
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0005-longest-palindromic-substring](https://github.com/shyam2520/DSA/tree/main/0005-longest-palindromic-substring/) | Medium |
+| [0118-pascals-triangle](https://github.com/shyam2520/DSA/tree/main/0118-pascals-triangle/) | Easy |
 | [0221-maximal-square](https://github.com/shyam2520/DSA/tree/main/0221-maximal-square/) | Medium |
 | [0279-perfect-squares](https://github.com/shyam2520/DSA/tree/main/0279-perfect-squares/) | Medium |
 | [0410-split-array-largest-sum](https://github.com/shyam2520/DSA/tree/main/0410-split-array-largest-sum/) | Hard |
