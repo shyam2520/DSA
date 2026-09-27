@@ -11,6 +11,7 @@ Leet Code Submissions
 | [0048-rotate-image](https://github.com/shyam2520/DSA/tree/main/0048-rotate-image/) | Medium |
 | [0054-spiral-matrix](https://github.com/shyam2520/DSA/tree/main/0054-spiral-matrix/) | Medium |
 | [0056-merge-intervals](https://github.com/shyam2520/DSA/tree/main/0056-merge-intervals/) | Medium |
+| [0073-set-matrix-zeroes](https://github.com/shyam2520/DSA/tree/main/0073-set-matrix-zeroes/) | Medium |
 | [0118-pascals-triangle](https://github.com/shyam2520/DSA/tree/main/0118-pascals-triangle/) | Easy |
 | [0169-majority-element](https://github.com/shyam2520/DSA/tree/main/0169-majority-element/) | Easy |
 | [0189-rotate-array](https://github.com/shyam2520/DSA/tree/main/0189-rotate-array/) | Medium |
@@ -54,6 +55,7 @@ Leet Code Submissions
 | ------- | ------- |
 | [0048-rotate-image](https://github.com/shyam2520/DSA/tree/main/0048-rotate-image/) | Medium |
 | [0054-spiral-matrix](https://github.com/shyam2520/DSA/tree/main/0054-spiral-matrix/) | Medium |
+| [0073-set-matrix-zeroes](https://github.com/shyam2520/DSA/tree/main/0073-set-matrix-zeroes/) | Medium |
 | [0221-maximal-square](https://github.com/shyam2520/DSA/tree/main/0221-maximal-square/) | Medium |
 | [0909-snakes-and-ladders](https://github.com/shyam2520/DSA/tree/main/0909-snakes-and-ladders/) | Medium |
 | [0931-minimum-falling-path-sum](https://github.com/shyam2520/DSA/tree/main/0931-minimum-falling-path-sum/) | Medium |
@@ -183,6 +185,7 @@ Leet Code Submissions
 ## Hash Table
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [0073-set-matrix-zeroes](https://github.com/shyam2520/DSA/tree/main/0073-set-matrix-zeroes/) | Medium |
 | [0169-majority-element](https://github.com/shyam2520/DSA/tree/main/0169-majority-element/) | Easy |
 | [0208-implement-trie-prefix-tree](https://github.com/shyam2520/DSA/tree/main/0208-implement-trie-prefix-tree/) | Medium |
 | [0268-missing-number](https://github.com/shyam2520/DSA/tree/main/0268-missing-number/) | Easy |
