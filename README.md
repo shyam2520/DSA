@@ -7,6 +7,7 @@ Leet Code Submissions
 ## Array
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [0015-3sum](https://github.com/shyam2520/DSA/tree/main/0015-3sum/) | Medium |
 | [0016-3sum-closest](https://github.com/shyam2520/DSA/tree/main/0016-3sum-closest/) | Medium |
 | [0048-rotate-image](https://github.com/shyam2520/DSA/tree/main/0048-rotate-image/) | Medium |
 | [0054-spiral-matrix](https://github.com/shyam2520/DSA/tree/main/0054-spiral-matrix/) | Medium |
@@ -165,6 +166,7 @@ Leet Code Submissions
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0005-longest-palindromic-substring](https://github.com/shyam2520/DSA/tree/main/0005-longest-palindromic-substring/) | Medium |
+| [0015-3sum](https://github.com/shyam2520/DSA/tree/main/0015-3sum/) | Medium |
 | [0016-3sum-closest](https://github.com/shyam2520/DSA/tree/main/0016-3sum-closest/) | Medium |
 | [0189-rotate-array](https://github.com/shyam2520/DSA/tree/main/0189-rotate-array/) | Medium |
 | [0567-permutation-in-string](https://github.com/shyam2520/DSA/tree/main/0567-permutation-in-string/) | Medium |
@@ -228,6 +230,7 @@ Leet Code Submissions
 ## Sorting
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [0015-3sum](https://github.com/shyam2520/DSA/tree/main/0015-3sum/) | Medium |
 | [0016-3sum-closest](https://github.com/shyam2520/DSA/tree/main/0016-3sum-closest/) | Medium |
 | [0056-merge-intervals](https://github.com/shyam2520/DSA/tree/main/0056-merge-intervals/) | Medium |
 | [0169-majority-element](https://github.com/shyam2520/DSA/tree/main/0169-majority-element/) | Easy |
