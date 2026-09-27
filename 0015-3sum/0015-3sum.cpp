@@ -2,16 +2,14 @@ class Solution {
 public:
     vector<vector<int>> threeSum(vector<int>& nums) {
         sort(begin(nums),end(nums));
-        int n=nums.size();
         vector<vector<int>> res;
+        int n = nums.size();
         for(int i=0;i<n-2;i++){
-            // int x=nums[i];
-            while(i>0 && i<n-2 && nums[i]==nums[i-1]) i++;
-            if(i==n-2) break;
+            if(i>0 && nums[i]==nums[i-1]) continue;
             int j=i+1,k=n-1;
             while(j<k){
-                int sum=nums[i]+nums[j]+nums[k];
-                if(!sum){
+                int sum =nums[i]+nums[j]+nums[k];
+                if(sum==0){
                     res.push_back({nums[i],nums[j++],nums[k--]});
                     while(j<k && nums[j]==nums[j-1]) j++;
                     while(j<k && nums[k]==nums[k+1]) k--;
@@ -20,7 +18,6 @@ public:
                 else j++;
             }
         }
-
         return res;
     }
 };
