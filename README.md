@@ -14,6 +14,7 @@ Leet Code Submissions
 | [0054-spiral-matrix](https://github.com/shyam2520/DSA/tree/main/0054-spiral-matrix/) | Medium |
 | [0056-merge-intervals](https://github.com/shyam2520/DSA/tree/main/0056-merge-intervals/) | Medium |
 | [0073-set-matrix-zeroes](https://github.com/shyam2520/DSA/tree/main/0073-set-matrix-zeroes/) | Medium |
+| [0075-sort-colors](https://github.com/shyam2520/DSA/tree/main/0075-sort-colors/) | Medium |
 | [0118-pascals-triangle](https://github.com/shyam2520/DSA/tree/main/0118-pascals-triangle/) | Easy |
 | [0169-majority-element](https://github.com/shyam2520/DSA/tree/main/0169-majority-element/) | Easy |
 | [0189-rotate-array](https://github.com/shyam2520/DSA/tree/main/0189-rotate-array/) | Medium |
@@ -170,6 +171,7 @@ Leet Code Submissions
 | [0015-3sum](https://github.com/shyam2520/DSA/tree/main/0015-3sum/) | Medium |
 | [0016-3sum-closest](https://github.com/shyam2520/DSA/tree/main/0016-3sum-closest/) | Medium |
 | [0018-4sum](https://github.com/shyam2520/DSA/tree/main/0018-4sum/) | Medium |
+| [0075-sort-colors](https://github.com/shyam2520/DSA/tree/main/0075-sort-colors/) | Medium |
 | [0189-rotate-array](https://github.com/shyam2520/DSA/tree/main/0189-rotate-array/) | Medium |
 | [0567-permutation-in-string](https://github.com/shyam2520/DSA/tree/main/0567-permutation-in-string/) | Medium |
 | [1048-longest-string-chain](https://github.com/shyam2520/DSA/tree/main/1048-longest-string-chain/) | Medium |
@@ -236,6 +238,7 @@ Leet Code Submissions
 | [0016-3sum-closest](https://github.com/shyam2520/DSA/tree/main/0016-3sum-closest/) | Medium |
 | [0018-4sum](https://github.com/shyam2520/DSA/tree/main/0018-4sum/) | Medium |
 | [0056-merge-intervals](https://github.com/shyam2520/DSA/tree/main/0056-merge-intervals/) | Medium |
+| [0075-sort-colors](https://github.com/shyam2520/DSA/tree/main/0075-sort-colors/) | Medium |
 | [0169-majority-element](https://github.com/shyam2520/DSA/tree/main/0169-majority-element/) | Easy |
 | [0268-missing-number](https://github.com/shyam2520/DSA/tree/main/0268-missing-number/) | Easy |
 | [1048-longest-string-chain](https://github.com/shyam2520/DSA/tree/main/1048-longest-string-chain/) | Medium |
@@ -288,6 +291,7 @@ Leet Code Submissions
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0056-merge-intervals](https://github.com/shyam2520/DSA/tree/main/0056-merge-intervals/) | Medium |
+| [0075-sort-colors](https://github.com/shyam2520/DSA/tree/main/0075-sort-colors/) | Medium |
 ## Divide and Conquer
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -308,4 +312,8 @@ Leet Code Submissions
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0572-subtree-of-another-tree](https://github.com/shyam2520/DSA/tree/main/0572-subtree-of-another-tree/) | Easy |
+## Bubble Sort
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [0075-sort-colors](https://github.com/shyam2520/DSA/tree/main/0075-sort-colors/) | Medium |
 <!---LeetCode Topics End-->
