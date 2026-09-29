@@ -10,6 +10,7 @@ Leet Code Submissions
 | [0015-3sum](https://github.com/shyam2520/DSA/tree/main/0015-3sum/) | Medium |
 | [0016-3sum-closest](https://github.com/shyam2520/DSA/tree/main/0016-3sum-closest/) | Medium |
 | [0018-4sum](https://github.com/shyam2520/DSA/tree/main/0018-4sum/) | Medium |
+| [0031-next-permutation](https://github.com/shyam2520/DSA/tree/main/0031-next-permutation/) | Medium |
 | [0048-rotate-image](https://github.com/shyam2520/DSA/tree/main/0048-rotate-image/) | Medium |
 | [0054-spiral-matrix](https://github.com/shyam2520/DSA/tree/main/0054-spiral-matrix/) | Medium |
 | [0056-merge-intervals](https://github.com/shyam2520/DSA/tree/main/0056-merge-intervals/) | Medium |
@@ -171,6 +172,7 @@ Leet Code Submissions
 | [0015-3sum](https://github.com/shyam2520/DSA/tree/main/0015-3sum/) | Medium |
 | [0016-3sum-closest](https://github.com/shyam2520/DSA/tree/main/0016-3sum-closest/) | Medium |
 | [0018-4sum](https://github.com/shyam2520/DSA/tree/main/0018-4sum/) | Medium |
+| [0031-next-permutation](https://github.com/shyam2520/DSA/tree/main/0031-next-permutation/) | Medium |
 | [0075-sort-colors](https://github.com/shyam2520/DSA/tree/main/0075-sort-colors/) | Medium |
 | [0189-rotate-array](https://github.com/shyam2520/DSA/tree/main/0189-rotate-array/) | Medium |
 | [0567-permutation-in-string](https://github.com/shyam2520/DSA/tree/main/0567-permutation-in-string/) | Medium |
