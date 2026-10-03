@@ -21,6 +21,7 @@ Leet Code Submissions
 | [0189-rotate-array](https://github.com/shyam2520/DSA/tree/main/0189-rotate-array/) | Medium |
 | [0221-maximal-square](https://github.com/shyam2520/DSA/tree/main/0221-maximal-square/) | Medium |
 | [0268-missing-number](https://github.com/shyam2520/DSA/tree/main/0268-missing-number/) | Easy |
+| [0347-top-k-frequent-elements](https://github.com/shyam2520/DSA/tree/main/0347-top-k-frequent-elements/) | Medium |
 | [0399-evaluate-division](https://github.com/shyam2520/DSA/tree/main/0399-evaluate-division/) | Medium |
 | [0410-split-array-largest-sum](https://github.com/shyam2520/DSA/tree/main/0410-split-array-largest-sum/) | Hard |
 | [0421-maximum-xor-of-two-numbers-in-an-array](https://github.com/shyam2520/DSA/tree/main/0421-maximum-xor-of-two-numbers-in-an-array/) | Medium |
@@ -79,6 +80,7 @@ Leet Code Submissions
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0169-majority-element](https://github.com/shyam2520/DSA/tree/main/0169-majority-element/) | Easy |
+| [0347-top-k-frequent-elements](https://github.com/shyam2520/DSA/tree/main/0347-top-k-frequent-elements/) | Medium |
 | [3848-check-digitorial-permutation](https://github.com/shyam2520/DSA/tree/main/3848-check-digitorial-permutation/) | Medium |
 ## String
 | Problem Name | Difficulty |
@@ -197,6 +199,7 @@ Leet Code Submissions
 | [0169-majority-element](https://github.com/shyam2520/DSA/tree/main/0169-majority-element/) | Easy |
 | [0208-implement-trie-prefix-tree](https://github.com/shyam2520/DSA/tree/main/0208-implement-trie-prefix-tree/) | Medium |
 | [0268-missing-number](https://github.com/shyam2520/DSA/tree/main/0268-missing-number/) | Easy |
+| [0347-top-k-frequent-elements](https://github.com/shyam2520/DSA/tree/main/0347-top-k-frequent-elements/) | Medium |
 | [0421-maximum-xor-of-two-numbers-in-an-array](https://github.com/shyam2520/DSA/tree/main/0421-maximum-xor-of-two-numbers-in-an-array/) | Medium |
 | [0567-permutation-in-string](https://github.com/shyam2520/DSA/tree/main/0567-permutation-in-string/) | Medium |
 | [1048-longest-string-chain](https://github.com/shyam2520/DSA/tree/main/1048-longest-string-chain/) | Medium |
@@ -227,6 +230,7 @@ Leet Code Submissions
 ## Heap (Priority Queue)
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [0347-top-k-frequent-elements](https://github.com/shyam2520/DSA/tree/main/0347-top-k-frequent-elements/) | Medium |
 | [2336-smallest-number-in-infinite-set](https://github.com/shyam2520/DSA/tree/main/2336-smallest-number-in-infinite-set/) | Medium |
 | [3286-find-a-safe-walk-through-a-grid](https://github.com/shyam2520/DSA/tree/main/3286-find-a-safe-walk-through-a-grid/) | Medium |
 ## Ordered Set
@@ -243,6 +247,7 @@ Leet Code Submissions
 | [0075-sort-colors](https://github.com/shyam2520/DSA/tree/main/0075-sort-colors/) | Medium |
 | [0169-majority-element](https://github.com/shyam2520/DSA/tree/main/0169-majority-element/) | Easy |
 | [0268-missing-number](https://github.com/shyam2520/DSA/tree/main/0268-missing-number/) | Easy |
+| [0347-top-k-frequent-elements](https://github.com/shyam2520/DSA/tree/main/0347-top-k-frequent-elements/) | Medium |
 | [1048-longest-string-chain](https://github.com/shyam2520/DSA/tree/main/1048-longest-string-chain/) | Medium |
 ## Topological Sort
 | Problem Name | Difficulty |
@@ -298,6 +303,7 @@ Leet Code Submissions
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0169-majority-element](https://github.com/shyam2520/DSA/tree/main/0169-majority-element/) | Easy |
+| [0347-top-k-frequent-elements](https://github.com/shyam2520/DSA/tree/main/0347-top-k-frequent-elements/) | Medium |
 ## Boyer–Moore Majority Vote Algorithm
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -318,4 +324,12 @@ Leet Code Submissions
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0075-sort-colors](https://github.com/shyam2520/DSA/tree/main/0075-sort-colors/) | Medium |
+## Bucket Sort
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [0347-top-k-frequent-elements](https://github.com/shyam2520/DSA/tree/main/0347-top-k-frequent-elements/) | Medium |
+## Quickselect
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [0347-top-k-frequent-elements](https://github.com/shyam2520/DSA/tree/main/0347-top-k-frequent-elements/) | Medium |
 <!---LeetCode Topics End-->
