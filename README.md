@@ -94,6 +94,7 @@ Leet Code Submissions
 | [0567-permutation-in-string](https://github.com/shyam2520/DSA/tree/main/0567-permutation-in-string/) | Medium |
 | [1048-longest-string-chain](https://github.com/shyam2520/DSA/tree/main/1048-longest-string-chain/) | Medium |
 | [1249-minimum-remove-to-make-valid-parentheses](https://github.com/shyam2520/DSA/tree/main/1249-minimum-remove-to-make-valid-parentheses/) | Medium |
+| [1358-number-of-substrings-containing-all-three-characters](https://github.com/shyam2520/DSA/tree/main/1358-number-of-substrings-containing-all-three-characters/) | Medium |
 | [1545-find-kth-bit-in-nth-binary-string](https://github.com/shyam2520/DSA/tree/main/1545-find-kth-bit-in-nth-binary-string/) | Medium |
 | [1758-minimum-changes-to-make-alternating-binary-string](https://github.com/shyam2520/DSA/tree/main/1758-minimum-changes-to-make-alternating-binary-string/) | Easy |
 | [1784-check-if-binary-string-has-at-most-one-segment-of-ones](https://github.com/shyam2520/DSA/tree/main/1784-check-if-binary-string-has-at-most-one-segment-of-ones/) | Easy |
@@ -208,12 +209,14 @@ Leet Code Submissions
 | [0424-longest-repeating-character-replacement](https://github.com/shyam2520/DSA/tree/main/0424-longest-repeating-character-replacement/) | Medium |
 | [0567-permutation-in-string](https://github.com/shyam2520/DSA/tree/main/0567-permutation-in-string/) | Medium |
 | [1048-longest-string-chain](https://github.com/shyam2520/DSA/tree/main/1048-longest-string-chain/) | Medium |
+| [1358-number-of-substrings-containing-all-three-characters](https://github.com/shyam2520/DSA/tree/main/1358-number-of-substrings-containing-all-three-characters/) | Medium |
 | [2336-smallest-number-in-infinite-set](https://github.com/shyam2520/DSA/tree/main/2336-smallest-number-in-infinite-set/) | Medium |
 ## Sliding Window
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0424-longest-repeating-character-replacement](https://github.com/shyam2520/DSA/tree/main/0424-longest-repeating-character-replacement/) | Medium |
 | [0567-permutation-in-string](https://github.com/shyam2520/DSA/tree/main/0567-permutation-in-string/) | Medium |
+| [1358-number-of-substrings-containing-all-three-characters](https://github.com/shyam2520/DSA/tree/main/1358-number-of-substrings-containing-all-three-characters/) | Medium |
 ## Bit Manipulation
 | Problem Name | Difficulty |
 | ------- | ------- |
