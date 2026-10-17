@@ -15,15 +15,13 @@ public:
         vector<int> dict(26,0);
         int res=0;
         for(int i=0;i<s.size();i++){
-            dict[s[i]-'A']++;
-            while(true){
-                int maxcnt=getMaxCnt(dict);
-                int diff_chrs=(i-l)+1 - maxcnt;
-                if(diff_chrs>k){
+            dict[s[i]-'A']++; 
+            while(((i-l)+1) - getMaxCnt(dict)>k){
+                // if(diff_chrs>k){
                     dict[s[l]-'A']--;
                     l++;
-                } 
-                else break;
+                // } 
+                // else false;
             }
             res=max(res,i-l+1);
         }
