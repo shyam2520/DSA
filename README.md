@@ -90,6 +90,7 @@ Leet Code Submissions
 | [0067-add-binary](https://github.com/shyam2520/DSA/tree/main/0067-add-binary/) | Easy |
 | [0208-implement-trie-prefix-tree](https://github.com/shyam2520/DSA/tree/main/0208-implement-trie-prefix-tree/) | Medium |
 | [0399-evaluate-division](https://github.com/shyam2520/DSA/tree/main/0399-evaluate-division/) | Medium |
+| [0424-longest-repeating-character-replacement](https://github.com/shyam2520/DSA/tree/main/0424-longest-repeating-character-replacement/) | Medium |
 | [0567-permutation-in-string](https://github.com/shyam2520/DSA/tree/main/0567-permutation-in-string/) | Medium |
 | [1048-longest-string-chain](https://github.com/shyam2520/DSA/tree/main/1048-longest-string-chain/) | Medium |
 | [1249-minimum-remove-to-make-valid-parentheses](https://github.com/shyam2520/DSA/tree/main/1249-minimum-remove-to-make-valid-parentheses/) | Medium |
@@ -204,12 +205,14 @@ Leet Code Submissions
 | [0268-missing-number](https://github.com/shyam2520/DSA/tree/main/0268-missing-number/) | Easy |
 | [0347-top-k-frequent-elements](https://github.com/shyam2520/DSA/tree/main/0347-top-k-frequent-elements/) | Medium |
 | [0421-maximum-xor-of-two-numbers-in-an-array](https://github.com/shyam2520/DSA/tree/main/0421-maximum-xor-of-two-numbers-in-an-array/) | Medium |
+| [0424-longest-repeating-character-replacement](https://github.com/shyam2520/DSA/tree/main/0424-longest-repeating-character-replacement/) | Medium |
 | [0567-permutation-in-string](https://github.com/shyam2520/DSA/tree/main/0567-permutation-in-string/) | Medium |
 | [1048-longest-string-chain](https://github.com/shyam2520/DSA/tree/main/1048-longest-string-chain/) | Medium |
 | [2336-smallest-number-in-infinite-set](https://github.com/shyam2520/DSA/tree/main/2336-smallest-number-in-infinite-set/) | Medium |
 ## Sliding Window
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [0424-longest-repeating-character-replacement](https://github.com/shyam2520/DSA/tree/main/0424-longest-repeating-character-replacement/) | Medium |
 | [0567-permutation-in-string](https://github.com/shyam2520/DSA/tree/main/0567-permutation-in-string/) | Medium |
 ## Bit Manipulation
 | Problem Name | Difficulty |
