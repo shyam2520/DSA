@@ -32,6 +32,7 @@ Leet Code Submissions
 | [0931-minimum-falling-path-sum](https://github.com/shyam2520/DSA/tree/main/0931-minimum-falling-path-sum/) | Medium |
 | [1048-longest-string-chain](https://github.com/shyam2520/DSA/tree/main/1048-longest-string-chain/) | Medium |
 | [1277-count-square-submatrices-with-all-ones](https://github.com/shyam2520/DSA/tree/main/1277-count-square-submatrices-with-all-ones/) | Medium |
+| [1423-maximum-points-you-can-obtain-from-cards](https://github.com/shyam2520/DSA/tree/main/1423-maximum-points-you-can-obtain-from-cards/) | Medium |
 | [1582-special-positions-in-a-binary-matrix](https://github.com/shyam2520/DSA/tree/main/1582-special-positions-in-a-binary-matrix/) | Easy |
 | [1707-maximum-xor-with-an-element-from-array](https://github.com/shyam2520/DSA/tree/main/1707-maximum-xor-with-an-element-from-array/) | Hard |
 | [1762-buildings-with-an-ocean-view](https://github.com/shyam2520/DSA/tree/main/1762-buildings-with-an-ocean-view/) | Medium |
@@ -217,6 +218,7 @@ Leet Code Submissions
 | [0424-longest-repeating-character-replacement](https://github.com/shyam2520/DSA/tree/main/0424-longest-repeating-character-replacement/) | Medium |
 | [0567-permutation-in-string](https://github.com/shyam2520/DSA/tree/main/0567-permutation-in-string/) | Medium |
 | [1358-number-of-substrings-containing-all-three-characters](https://github.com/shyam2520/DSA/tree/main/1358-number-of-substrings-containing-all-three-characters/) | Medium |
+| [1423-maximum-points-you-can-obtain-from-cards](https://github.com/shyam2520/DSA/tree/main/1423-maximum-points-you-can-obtain-from-cards/) | Medium |
 ## Bit Manipulation
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -303,6 +305,7 @@ Leet Code Submissions
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0410-split-array-largest-sum](https://github.com/shyam2520/DSA/tree/main/0410-split-array-largest-sum/) | Hard |
+| [1423-maximum-points-you-can-obtain-from-cards](https://github.com/shyam2520/DSA/tree/main/1423-maximum-points-you-can-obtain-from-cards/) | Medium |
 ## Quicksort
 | Problem Name | Difficulty |
 | ------- | ------- |
