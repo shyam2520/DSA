@@ -1,20 +1,20 @@
 class Solution {
 public:
     int maxScore(vector<int>& cardPoints, int k) {
-        int total=0;
-        for(auto& i:cardPoints) {
-            total+=i;
-        }
-        int removal_size=0,n=cardPoints.size();
-        int anc=0,res=0,sum=0;
-        for(int i=0;i<n;i++){
-            sum+=cardPoints[i];
-            if((i-anc+1)>(n-k)){
-                sum-=cardPoints[anc++];
+        // take a sliding window from  size - k 
+        // total - sliding window = points take from end 
+        int l=0,wndw=cardPoints.size()-k;
+        int points = 0,wpoints=INT_MAX;
+        for(int i=0;i<cardPoints.size();i++){
+            if((i-l+1)<=wndw) points+=cardPoints[i];
+            else{
+                points-=cardPoints[l++];
+                points+=cardPoints[i];
             }
-            if((i-anc+1)==(n-k)) res=max(res,total-sum);
+            if(i-l+1==wndw) wpoints=min(points,wpoints);
         }
-        return res;
-        
+        int total=0;
+        for(auto& i:cardPoints) total+=i;
+        return total-wpoints;
     }
 };
