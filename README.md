@@ -83,6 +83,7 @@ Leet Code Submissions
 | ------- | ------- |
 | [0169-majority-element](https://github.com/shyam2520/DSA/tree/main/0169-majority-element/) | Easy |
 | [0347-top-k-frequent-elements](https://github.com/shyam2520/DSA/tree/main/0347-top-k-frequent-elements/) | Medium |
+| [0767-reorganize-string](https://github.com/shyam2520/DSA/tree/main/0767-reorganize-string/) | Medium |
 | [3848-check-digitorial-permutation](https://github.com/shyam2520/DSA/tree/main/3848-check-digitorial-permutation/) | Medium |
 ## String
 | Problem Name | Difficulty |
@@ -93,6 +94,7 @@ Leet Code Submissions
 | [0399-evaluate-division](https://github.com/shyam2520/DSA/tree/main/0399-evaluate-division/) | Medium |
 | [0424-longest-repeating-character-replacement](https://github.com/shyam2520/DSA/tree/main/0424-longest-repeating-character-replacement/) | Medium |
 | [0567-permutation-in-string](https://github.com/shyam2520/DSA/tree/main/0567-permutation-in-string/) | Medium |
+| [0767-reorganize-string](https://github.com/shyam2520/DSA/tree/main/0767-reorganize-string/) | Medium |
 | [1048-longest-string-chain](https://github.com/shyam2520/DSA/tree/main/1048-longest-string-chain/) | Medium |
 | [1249-minimum-remove-to-make-valid-parentheses](https://github.com/shyam2520/DSA/tree/main/1249-minimum-remove-to-make-valid-parentheses/) | Medium |
 | [1358-number-of-substrings-containing-all-three-characters](https://github.com/shyam2520/DSA/tree/main/1358-number-of-substrings-containing-all-three-characters/) | Medium |
@@ -209,6 +211,7 @@ Leet Code Submissions
 | [0421-maximum-xor-of-two-numbers-in-an-array](https://github.com/shyam2520/DSA/tree/main/0421-maximum-xor-of-two-numbers-in-an-array/) | Medium |
 | [0424-longest-repeating-character-replacement](https://github.com/shyam2520/DSA/tree/main/0424-longest-repeating-character-replacement/) | Medium |
 | [0567-permutation-in-string](https://github.com/shyam2520/DSA/tree/main/0567-permutation-in-string/) | Medium |
+| [0767-reorganize-string](https://github.com/shyam2520/DSA/tree/main/0767-reorganize-string/) | Medium |
 | [1048-longest-string-chain](https://github.com/shyam2520/DSA/tree/main/1048-longest-string-chain/) | Medium |
 | [1358-number-of-substrings-containing-all-three-characters](https://github.com/shyam2520/DSA/tree/main/1358-number-of-substrings-containing-all-three-characters/) | Medium |
 | [2336-smallest-number-in-infinite-set](https://github.com/shyam2520/DSA/tree/main/2336-smallest-number-in-infinite-set/) | Medium |
@@ -242,6 +245,7 @@ Leet Code Submissions
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0347-top-k-frequent-elements](https://github.com/shyam2520/DSA/tree/main/0347-top-k-frequent-elements/) | Medium |
+| [0767-reorganize-string](https://github.com/shyam2520/DSA/tree/main/0767-reorganize-string/) | Medium |
 | [2336-smallest-number-in-infinite-set](https://github.com/shyam2520/DSA/tree/main/2336-smallest-number-in-infinite-set/) | Medium |
 | [3286-find-a-safe-walk-through-a-grid](https://github.com/shyam2520/DSA/tree/main/3286-find-a-safe-walk-through-a-grid/) | Medium |
 ## Ordered Set
@@ -259,6 +263,7 @@ Leet Code Submissions
 | [0169-majority-element](https://github.com/shyam2520/DSA/tree/main/0169-majority-element/) | Easy |
 | [0268-missing-number](https://github.com/shyam2520/DSA/tree/main/0268-missing-number/) | Easy |
 | [0347-top-k-frequent-elements](https://github.com/shyam2520/DSA/tree/main/0347-top-k-frequent-elements/) | Medium |
+| [0767-reorganize-string](https://github.com/shyam2520/DSA/tree/main/0767-reorganize-string/) | Medium |
 | [1048-longest-string-chain](https://github.com/shyam2520/DSA/tree/main/1048-longest-string-chain/) | Medium |
 ## Topological Sort
 | Problem Name | Difficulty |
@@ -301,6 +306,7 @@ Leet Code Submissions
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0410-split-array-largest-sum](https://github.com/shyam2520/DSA/tree/main/0410-split-array-largest-sum/) | Hard |
+| [0767-reorganize-string](https://github.com/shyam2520/DSA/tree/main/0767-reorganize-string/) | Medium |
 ## Prefix Sum
 | Problem Name | Difficulty |
 | ------- | ------- |
